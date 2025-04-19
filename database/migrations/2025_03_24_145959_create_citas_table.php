@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamp('fecha');
             $table->string('motivo');
             $table->enum('estado', ['pendiente', 'confirmada', 'cancelada'])->default('pendiente');
-            $table->foreign('id_usuario')->references('id')->on('usuarios');
-            $table->foreign('id_profesional')->references('id')->on('profesionales');
+            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_profesional')->references('id')->on('users');
             $table->unique(['id_profesional', 'fecha']);
             $table->timestamps();
         });

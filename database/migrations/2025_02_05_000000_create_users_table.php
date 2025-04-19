@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('usuarios', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -19,18 +19,24 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('telefono');
-            $table->string('direccion');
-            $table->string('ciudad');
+            
+             // Opcionales solo para usuarios (no admin/profesional)
+            $table->string('direccion')->nullable();
+            $table->string('ciudad')->nullable();
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            
             $table->rememberToken();
             $table->timestamps();
         });
 
+        // Laravel maneja la tabla de restablecimiento de contraseñas por defecto.
+        // Si realmente necesitas personalizarla, puedes mantenerla, pero generalmente no es necesario.
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
-
     }
 
     /**

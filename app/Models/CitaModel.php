@@ -21,6 +21,6 @@ class CitaModel extends Model
     }
 
     public function profesional() {
-        return $this->belongsTo(ProfesionalModel::class, 'id_profesional');
+        return $this->belongsTo(UserModel::class, 'id_profesional');
     }
 }

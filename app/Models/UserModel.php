@@ -11,11 +11,16 @@ class UserModel extends Authenticatable
 {
     use HasFactory, Notifiable;
     
-    protected $table = 'usuarios';
+    protected $table = 'users';
     protected $fillable = [
-        'name',
         'email',
         'password',
+        'nombre',
+        'apellidos',
+        'telefono',
+        'direccion',
+        'ciudad',
+        'role_id',
     ];
 
     protected $hidden = [
@@ -33,4 +38,8 @@ class UserModel extends Authenticatable
     public function citas() {
         return $this->hasMany(CitaModel::class, 'id_usuario');
     }
+    public function role()
+{
+    return $this->belongsTo(RoleModel::class, 'rol_id');
+}
 }
