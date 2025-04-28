@@ -3,6 +3,21 @@
 
 // Variables
 @import 'variables';
+@import 'public-menu';
+@import 'login';
+@import 'contacto';
+@import 'public-footer';
+@import 'publicaciones';
+@import 'publicacion';
+@import 'clinicas';
+@import 'equipo';
+@import 'servicios';
 
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
+
+[x-cloak] {
+    display: none !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Publication;
 use App\Models\UserModel;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,7 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([RolesSeeder::class,]);
+        $this->call([
+            RolesSeeder::class,
+            PublicationsSeeder::class,
+        ]);
         UserModel::factory()->count(10)->create();
         
     }
