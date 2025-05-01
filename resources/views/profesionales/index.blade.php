@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
-{{-- resources/views/usuarios/index.blade.php --}}
+{{-- resources/views/profesionales/index.blade.php --}}
 @section('content')
 
 <div class="table-container">
-    <h1>Pacientes</h1>
-    <a href="{{ route('admin.usuarios.create') }}" class="btn btn-primary mb-3">Crear nuevo usuario</a>
+    <h1>Profesionales</h1>
+    <a href="{{ route('admin.profesionales.create') }}" class="btn btn-primary mb-3">Crear nuevo profesional</a>
     <table class="table">
         <thead>
             <tr>
@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($pacientes as $usuario)
+            @foreach ($profesionales as $usuario)
             <tr>
                 <td>{{ $usuario->nombre }}</td>
                 <td>{{ $usuario->apellidos }}</td>
@@ -28,8 +28,9 @@
                 <td>{{ $usuario->direccion }}</td>
                 <td>{{ $usuario->ciudad }}</td>
                 <td>
-                    <a href="{{ route('admin.usuarios.edit', $usuario) }}" class="btn btn-sm btn-warning">Editar</a>
-                    <form action="{{ route('admin.usuarios.destroy', $usuario) }}" method="POST"
+                    <a href="{{ route('admin.profesionales.edit', $usuario) }}"
+                        class="btn btn-sm btn-warning">Editar</a>
+                    <form action="{{ route('admin.profesionales.delete', $usuario) }}" method="POST"
                         style="display:inline;">
                         @csrf @method('DELETE')
                         <button type="submit" class="btn btn-sm btn-danger"

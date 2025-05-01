@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RolesSeeder::class,
             PublicationsSeeder::class,
+            AdminUserSeeder::class,
         ]);
         UserModel::factory()->count(10)->create();
         

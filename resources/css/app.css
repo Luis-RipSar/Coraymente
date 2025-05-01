@@ -19,7 +19,6 @@
   }
   main {
     transition: padding-top 0.3s ease;
-    padding-top: 20rem;
   }
   .public-nav.scrolled ~ main {
     padding-top: 3rem;
@@ -97,12 +96,45 @@
     color: #ffffff;
     border-radius: 1rem;
     font-weight: 600;
+    min-width: 10rem;
+    justify-content: center;
     text-decoration: none;
     transition: background 0.3s, box-shadow 0.3s;
   }
   .public-login-btn:hover {
     background-color: #DDD2C9;
     box-shadow: 0 0 8px rgb(0, 0, 0);
+  }
+  /* menú oculto por defecto */
+  .dropdown-sesion {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /* alineado al borde derecho del botón */
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 10rem;
+    z-index: 50;
+    overflow: hidden;
+  }
+  /* lo mostramos al hover del contenedor .group */
+  .group:hover .dropdown-sesion {
+    display: block;
+  }
+  /* enlaces */
+  .dropdown-sesion-link {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #374151;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .dropdown-sesion-link:hover {
+    background: #F3F4F6;
+    width: 100%;
   }
 }
 /* Estilos del login (extraído) */
@@ -866,6 +898,180 @@
   /* Scroll suave para enlaces ancla */
   html {
     scroll-behavior: smooth;
+  }
+}
+@layer components {
+  .admin-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 10rem;
+    background-color: #E2E7E8;
+  }
+  /* Contenedor de la tabla */
+  .table-container {
+    max-width: 80%;
+    min-width: 60%;
+    margin-top: 5rem;
+  }
+  .table-container h1 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #1F2937;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .table-container h1::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    background: #c9b8aa;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+  .table-container h1:hover::after {
+    width: 50%;
+  }
+  /* Estilos de la tabla */
+  .table {
+    min-width: 100%;
+    margin-top: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .table thead {
+    background: #A2C9D8;
+  }
+  .table thead th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1F2937;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .table tbody tr:nth-child(odd) {
+    background: #DDD2C9;
+  }
+  .table tbody tr:nth-child(even) {
+    background: #E2E7E8;
+  }
+  .table tbody tr td {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #4B5563;
+    vertical-align: middle;
+  }
+  /* Botones */
+  .btn-primary {
+    background: #2563EB;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .btn-primary:hover {
+    background: #1E40AF;
+  }
+  .btn-warning {
+    display: inline-block;
+    background: #FBBF24;
+    color: #1F2937;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .btn-warning:hover {
+    background: #F59E0B;
+  }
+  .btn-danger {
+    display: inline-block;
+    background: #DC2626;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .btn-danger:hover {
+    background: #B91C1C;
+  }
+  /* Formulario */
+  .usuarios-form {
+    max-width: 80%;
+    min-width: 60%;
+    margin-top: 7rem;
+    align-self: center;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .usuarios-form h1 {
+    grid-column: 1/-1;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #000000;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .usuarios-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .usuarios-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #000000;
+    font-size: 0.9rem;
+  }
+  .usuarios-form input,
+  .usuarios-form select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: #000000;
+    background: #E2E7E8;
+    border: 1px solid #c6cfd1;
+    border-radius: 0.375rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .usuarios-form input:focus,
+  .usuarios-form select:focus {
+    outline: none;
+    border-color: #DDD2C9;
+    box-shadow: 0 0 0 3px rgba(221, 210, 201, 0.3);
+    background: #ffffff;
+  }
+  .usuarios-form button[type=submit] {
+    grid-column: 1/-1;
+    justify-self: start;
+    display: inline-block;
+    background: #DDD2C9;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .usuarios-form button[type=submit]:hover {
+    background: #c9b8aa;
+    transform: scale(1.02);
   }
 }
 [x-cloak] {

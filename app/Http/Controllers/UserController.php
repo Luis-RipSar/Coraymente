@@ -9,13 +9,13 @@ class UserController extends Controller
     public function index()
     {
         // Aquí puedes agregar la lógica para mostrar la lista de usuarios
-        return view('users.index');
+        return view('usuarios.index');
     }
 
     public function create()
     {
         // Aquí puedes agregar la lógica para mostrar el formulario de creación de usuario
-        return view('users.create');
+        return view('usuarios.create');
     }
 
     public function store(Request $request)
@@ -27,13 +27,13 @@ class UserController extends Controller
     public function show($id)
     {
         // Aquí puedes agregar la lógica para mostrar un usuario específico
-        return view('users.show', compact('id'));
+        return view('usuarios.show', compact('id'));
     }
 
     public function edit($id)
     {
         // Aquí puedes agregar la lógica para mostrar el formulario de edición de un usuario
-        return view('users.edit', compact('id'));
+        return view('usuarios.edit', compact('id'));
     }
 
     public function update(Request $request, $id)

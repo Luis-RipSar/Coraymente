@@ -43,21 +43,47 @@
         </div>
 
         {{-- Botón de Inicio Sesión (desktop) --}}
+        @guest
         <a href="{{ route('login') }}" class="public-login-btn hidden md:inline-flex">
             Inicio Sesión
         </a>
-    </div>
+        @endguest
 
-    {{-- Menú desplegable móvil
-    <div class="mobile-menu md:hidden" x-show="open" x-cloak @click.away="open = false">
-        <div class="public-links-mobile">
-            <a href="{{ route('clinicas') }}">Clínicas</a>
-            <a href="{{ route('equipo') }}">Equipo</a>
-            <a href="{{ route('servicios') }}">Servicios</a>
-            <a href="{{ route('formacion') }}">Formación</a>
-            <a href="{{ route('publicaciones.index') }}">Publicaciones</a>
-            <a href="{{ route('contacto') }}">Contacto</a>
-            <a href="{{ route('login') }}" class="public-login-btn-mobile">Inicio Sesión</a>
+        @auth
+        <div class="relative group hidden md:inline-flex">
+            <button class="public-login-btn flex items-center gap-2" type="button">
+                {{ auth()->user()->nombre }}
+            </button>
+
+            {{-- Dropdown con “Perfil” y “Cerrar sesión” --}}
+            <ul class="dropdown-sesion">
+                <li>
+                    <a href="{{ route('admin.dashboard') }}" class="dropdown-sesion-link">
+                        Panel de Control
+                    </a>
+                </li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="dropdown-sesion-link">
+                            Cerrar sesión
+                        </button>
+                    </form>
+                </li>
+            </ul>
         </div>
-    </div> --}}
+        @endauth
+    </div>
 </nav>
+{{-- Menú desplegable móvil
+<div class="mobile-menu md:hidden" x-show="open" x-cloak @click.away="open = false">
+    <div class="public-links-mobile">
+        <a href="{{ route('clinicas') }}">Clínicas</a>
+        <a href="{{ route('equipo') }}">Equipo</a>
+        <a href="{{ route('servicios') }}">Servicios</a>
+        <a href="{{ route('formacion') }}">Formación</a>
+        <a href="{{ route('publicaciones.index') }}">Publicaciones</a>
+        <a href="{{ route('contacto') }}">Contacto</a>
+        <a href="{{ route('login') }}" class="public-login-btn-mobile">Inicio Sesión</a>
+    </div>
+</div> --}}

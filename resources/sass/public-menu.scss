@@ -22,7 +22,6 @@
 
     main {
         transition: padding-top .3s ease;
-        padding-top: 20rem;
     }
 
     .public-nav.scrolled~main {
@@ -111,12 +110,49 @@
         color: $blanco;
         border-radius: 1rem;
         font-weight: 600;
+        min-width: 10rem;
+        justify-content: center;
         text-decoration: none;
         transition: background .3s, box-shadow .3s;
 
         &:hover {
             background-color: $color1;
             box-shadow: 0 0 8px rgba(0, 0, 0);
+        }
+    }
+
+    /* menú oculto por defecto */
+    .dropdown-sesion {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        /* alineado al borde derecho del botón */
+        background: $blanco;
+        border-radius: .5rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+        min-width: 10rem;
+        z-index: 50;
+        overflow: hidden;
+    }
+
+    /* lo mostramos al hover del contenedor .group */
+    .group:hover .dropdown-sesion {
+        display: block;
+    }
+
+    /* enlaces */
+    .dropdown-sesion-link {
+        display: block;
+        width: 100%;
+        padding: .5rem 1rem;
+        color: #374151;
+        text-decoration: none;
+        transition: background .2s;
+
+        &:hover {
+            background: #F3F4F6;
+            width: 100%;
         }
     }
 }
