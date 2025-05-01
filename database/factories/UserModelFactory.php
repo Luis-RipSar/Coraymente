@@ -24,7 +24,7 @@ class UserModelFactory extends Factory
             'telefono' => $this->faker->phoneNumber(),
             'direccion' => $this->faker->address(),
             'ciudad' => $this->faker->city(),
-            'role_id' => 2, // Asignar un role_id por defecto, puedes cambiarlo según tus necesidades
+            'role_id' => rand(2,3), // Asignar un role_id por defecto, puedes cambiarlo según tus necesidades
         ];
     }
 }

@@ -41,19 +41,6 @@
         <input id="ciudad" type="text" name="ciudad" value="{{ old('ciudad') }}" required>
     </div>
 
-    <div class="form-group">
-        <label for="role_id">Rol</label>
-        <select id="role_id" name="role_id" required>
-            @foreach($roles as $rol)
-            @if(in_array($rol->id, [2,3]))
-            <option value="{{ $rol->id }}" {{ old('role_id')==$rol->id ? 'selected' : '' }}>
-                {{ $rol->nombre }}
-            </option>
-            @endif
-            @endforeach
-        </select>
-    </div>
-
     <button type="submit" class="btn-primary mt-4">
         Crear
     </button>

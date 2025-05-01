@@ -89,18 +89,18 @@ Route::middleware(['auth','verified', AdminMiddleware::class])
              ->name('usuarios.create');
         Route::get('/usuarios/{usuario}/edit', [UserManagementController::class, 'edit'])
             ->name('usuarios.edit');
-        Route::delete('/usuarios/delete', [UserManagementController::class, 'destroy'])
+        Route::delete('/usuarios/{usuario}', [UserManagementController::class, 'destroy'])
             ->name('usuarios.delete');
 
         // Gestion de profesionales
         Route::get('profesionales', 
              [UserManagementController::class, 'profesionalesIndex'])
              ->name('profesionales.index');
-        Route::get('/profesionales/create', [UserManagementController::class, 'create'])
+        Route::get('/profesionales/create', [UserManagementController::class, 'profesionalCreate'])
              ->name('profesionales.create');
-        Route::get('/profesionales/{profesionales}/edit', [UserManagementController::class, 'edit'])
+        Route::get('/profesionales/{profesionales}/edit', [UserManagementController::class, 'profesionalEdit'])
             ->name('profesionales.edit');
-        Route::delete('/profesionales/delete', [UserManagementController::class, 'destroy'])
+        Route::delete('/profesionales/{usuario}', [UserManagementController::class, 'destroy'])
             ->name('profesionales.delete');
 
             Route::resource('usuarios', UserManagementController::class)

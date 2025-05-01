@@ -13,8 +13,6 @@
                 <th>Apellidos</th>
                 <th>Email</th>
                 <th>Teléfono</th>
-                <th>Dirección</th>
-                <th>Ciudad</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -25,8 +23,6 @@
                 <td>{{ $usuario->apellidos }}</td>
                 <td>{{ $usuario->email }}</td>
                 <td>{{ $usuario->telefono }}</td>
-                <td>{{ $usuario->direccion }}</td>
-                <td>{{ $usuario->ciudad }}</td>
                 <td>
                     <a href="{{ route('admin.profesionales.edit', $usuario) }}"
                         class="btn btn-sm btn-warning">Editar</a>

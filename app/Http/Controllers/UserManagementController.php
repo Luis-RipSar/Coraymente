@@ -33,34 +33,45 @@ class UserManagementController extends Controller
 
     public function create()
     {
-        $roles = RoleModel::all();
-        return view('usuarios.create', compact('roles'));
+        return view('usuarios.create');
+    }
+
+    public function profesionalCreate()
+    {
+        $rol = RoleModel::findOrFail(2);
+        return view('profesionales.create', compact('rol'));
     }
 
     public function store(Request $request)
     {
-        $request->validate([
+        $reglas = [
             'email'     => 'required|email|unique:users,email',
             'password'  => 'required|min:6',
             'nombre'    => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
             'telefono'  => 'required|string|max:50',
-            'direccion' => 'required|string|max:255',
-            'ciudad'    => 'required|string|max:100',
-            'role_id'   => 'required|exists:roles,id',
-        ]);
+            'direccion' => 'string|max:255',
+            'ciudad'    => 'string|max:100',
+        ];
 
-        UserModel::create([
-            'email'     => $request->email,
-            'password'  => Hash::make($request->password),
-            'nombre'    => $request->nombre,
-            'apellidos' => $request->apellidos,
-            'telefono'  => $request->telefono,
-            'direccion' => $request->direccion,
-            'ciudad'    => $request->ciudad,
-            'role_id'   => $request->role_id,
-        ]);
+        if ($request->filled('role_id')) {
+            $reglas['role_id'] = 'required|exists:roles,id';
+        }
 
+        $data = $request->validate($reglas);
+
+        if (!$request->filled('role_id')) {
+            $data['role_id'] = 3;
+        }
+        
+
+        UserModel::create($data);
+
+        if($request->role_id === 2){
+            return redirect()
+            ->route('admin.profesionales.index')
+            ->with('success', 'Profesional creado con éxito');
+        }
         return redirect()
             ->route('admin.usuarios.index')
             ->with('success', 'Usuario creado con éxito');
@@ -72,6 +83,12 @@ class UserManagementController extends Controller
         return view('usuarios.edit', compact('usuario', 'roles'));
     }
 
+    public function profesionalEdit(UserModel $usuario)
+    {
+        $roles = RoleModel::all();
+        return view('profesionales.edit', compact('usuario', 'roles'));
+    }
+
     public function update(Request $request, UserModel $usuario)
     {
         $rules = [
@@ -79,8 +96,8 @@ class UserManagementController extends Controller
             'nombre'    => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
             'telefono'  => 'required|string|max:50',
-            'direccion' => 'required|string|max:255',
-            'ciudad'    => 'required|string|max:100',
+            'direccion' => 'string|max:255',
+            'ciudad'    => 'string|max:100',
         ];
 
         if ($request->filled('password')) {
@@ -101,6 +118,12 @@ class UserManagementController extends Controller
 
     public function destroy(UserModel $usuario)
     {
+        if($usuario->role_id === 2){
+            $usuario->delete();    
+            return redirect()
+                ->route('admin.profesionales.index')
+                ->with('success', 'Profesional eliminado');
+        }
         $usuario->delete();
         return redirect()
             ->route('admin.usuarios.index')

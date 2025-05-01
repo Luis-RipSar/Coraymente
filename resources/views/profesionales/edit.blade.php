@@ -53,24 +53,6 @@
         @enderror
     </div>
 
-    {{-- Dirección --}}
-    <div class="form-group">
-        <label for="direccion">Dirección</label>
-        <input id="direccion" type="text" name="direccion" value="{{ old('direccion',$usuario->direccion) }}" required>
-        @error('direccion')
-        <p class="text-red-600 text-sm">{{ $message }}</p>
-        @enderror
-    </div>
-
-    {{-- Ciudad --}}
-    <div class="form-group">
-        <label for="ciudad">Ciudad</label>
-        <input id="ciudad" type="text" name="ciudad" value="{{ old('ciudad',$usuario->ciudad) }}" required>
-        @error('ciudad')
-        <p class="text-red-600 text-sm">{{ $message }}</p>
-        @enderror
-    </div>
-
 
     <button type="submit" class="btn-primary mt-4">
         Actualizar
