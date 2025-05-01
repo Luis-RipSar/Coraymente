@@ -14,7 +14,7 @@
 
     <div class="public-footer-middle">
         <div class="footer-logo">
-            <img src="{{ asset('imagenes/logo.jpg') }}" alt="Coraymente">
+            <img src="{{ asset('imagenes/logo_vector.png') }}" alt="Coraymente">
         </div>
         <ul class="footer-info-list">
             <li class="footer-info-item">
