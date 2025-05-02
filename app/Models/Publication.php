@@ -10,7 +10,7 @@ class Publication extends Model
     protected $keyType = 'string';        // Si usas UUID
 
     protected $fillable = [
-        'id', 'titulo', 'slug', 'resumen',
+        'id', 'titulo', 'resumen',
         'body', 'image_url', 'published_at',
     ];
 

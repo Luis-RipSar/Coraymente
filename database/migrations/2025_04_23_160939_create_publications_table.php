@@ -13,7 +13,6 @@ return new class extends Migration
   Schema::create('publications', function (Blueprint $table) {
     $table->uuid('id')->primary();
     $table->string('titulo');
-    $table->string('slug')->unique();
     $table->string('resumen');
     $table->text('body');
     $table->string('image_url')->nullable();

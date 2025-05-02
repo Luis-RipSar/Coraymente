@@ -39,7 +39,6 @@ class PublicationsSeeder extends Seeder
             Publication::create([
                 'id'            => (string) Str::uuid(),
                 'titulo'        => $item['titulo'],
-                'slug'          => Str::slug($item['titulo']),
                 'resumen'       => $item['resumen'],
                 'body'          => $item['body'],
                 'image_url'     => $item['image_url'],
