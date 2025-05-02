@@ -26,7 +26,7 @@ Route::view('/contacto',   'public.contacto')->name('contacto');
 
 Route::get('/publicaciones',               [PublicationController::class, 'index'])
      ->name('publicaciones.index');
-Route::get('/publicaciones/{publication:slug}', [PublicationController::class, 'show'])
+Route::get('/publicaciones/{publication}', [PublicationController::class, 'show'])
      ->name('publicaciones.show');
 
 
@@ -62,12 +62,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 /*
 |--------------------------------------------------------------------------
-| Admin-only Routes
+| Admin Routes
 |--------------------------------------------------------------------------
-|
-| Solo accesibles si pass AdminMiddleware (role_id == 1).
-| Se definen bajo el prefijo /admin y el name admin.*
-|
 */
 Route::middleware(['auth','verified', AdminMiddleware::class])
      ->prefix('admin')
@@ -82,28 +78,43 @@ Route::middleware(['auth','verified', AdminMiddleware::class])
          // Route::resource('/roles', RoleManagementController::class);
 
          // Gestión de usuarios (para roles permitidos)
-        Route::get('pacientes', 
+          Route::get('pacientes', 
              [UserManagementController::class, 'pacientesIndex'])
              ->name('usuarios.index');
-        Route::get('/usuarios/create', [UserManagementController::class, 'create'])
+          Route::get('/usuarios/create', [UserManagementController::class, 'create'])
              ->name('usuarios.create');
-        Route::get('/usuarios/{usuario}/edit', [UserManagementController::class, 'edit'])
+          Route::get('/usuarios/{usuario}/edit', [UserManagementController::class, 'edit'])
             ->name('usuarios.edit');
-        Route::delete('/usuarios/{usuario}', [UserManagementController::class, 'destroy'])
+          Route::delete('/usuarios/{usuario}', [UserManagementController::class, 'destroy'])
             ->name('usuarios.delete');
 
-        // Gestion de profesionales
-        Route::get('profesionales', 
+          // Gestion de profesionales
+          Route::get('profesionales', 
              [UserManagementController::class, 'profesionalesIndex'])
              ->name('profesionales.index');
-        Route::get('/profesionales/create', [UserManagementController::class, 'profesionalCreate'])
+          Route::get('/profesionales/create', [UserManagementController::class, 'profesionalCreate'])
              ->name('profesionales.create');
-        Route::get('/profesionales/{profesionales}/edit', [UserManagementController::class, 'profesionalEdit'])
+          Route::get('/profesionales/{usuario}/edit', [UserManagementController::class, 'profesionalEdit'])
             ->name('profesionales.edit');
-        Route::delete('/profesionales/{usuario}', [UserManagementController::class, 'destroy'])
+          Route::delete('/profesionales/{usuario}', [UserManagementController::class, 'destroy'])
             ->name('profesionales.delete');
 
-            Route::resource('usuarios', UserManagementController::class)
+            // Gestion de publicaciones
+          Route::get('publicaciones', [PublicationController::class,'adminIndex'])
+              ->name('publicaciones.index');
+          Route::get('publicaciones/create', [PublicationController::class,'create'])
+              ->name('publicaciones.create');
+          Route::get('publicaciones/{publication}/edit', [PublicationController::class,'edit'])
+              ->name('publicaciones.edit');
+          Route::delete('publicaciones/{publication}', [PublicationController::class,'destroy'])
+              ->name('publicaciones.destroy');
+          Route::post('publicaciones', [PublicationController::class,'store'])
+               ->name('publicaciones.store');
+          Route::put('publicaciones/{publication}', [PublicationController::class,'update'])
+               ->name('publicaciones.update');
+
+               
+          Route::resource('usuarios', UserManagementController::class)
              ->except(['index']);
      });
 

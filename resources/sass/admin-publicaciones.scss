@@ -1,0 +1,104 @@
+@layer components {
+    .pub-form {
+        max-width: 80%;
+        min-width: 60%;
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        h1 {
+            grid-column: 1 / -1;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            color: $negro;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+
+    .pub-form__group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pub-form__label {
+        font-weight: 600;
+        color: $colorTexto;
+        margin-bottom: 0.25rem;
+    }
+
+    .pub-form__input,
+    .pub-form__textarea {
+        padding: 0.5rem;
+        border: 1px solid darken($color: $color3, $amount: 25);
+        border-radius: 0.375rem;
+        font-size: 1rem;
+        color: $colorTexto;
+        background: $blanco;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $color2;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+    }
+
+    .pub-form__textarea {
+        resize: vertical;
+    }
+
+    .pub-form__actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn-pub-save,
+    .btn-pub-cancel {
+        display: inline-block;
+        padding: 0.5rem 1.25rem;
+        font-weight: bold;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        text-align: center;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-pub-save {
+        background: #3B82F6; // blue-500
+        color: $blanco;
+
+        &:hover {
+            background: darken($color: #3B82F6, $amount: 10)
+        }
+    }
+
+    .btn-pub-cancel {
+        color: $colorTexto;
+
+        &:hover {
+            background: #D1D5DB;
+        }
+    }
+
+    .pub-form__file {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #D1D5DB;
+        border-radius: 0.375rem;
+        font-size: 1rem;
+        color: #374151;
+        background-color: #FFFFFF;
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+
+        &:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+    }
+}

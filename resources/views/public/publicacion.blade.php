@@ -27,7 +27,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="M6 2l3 7H2l3-7zm12 0l3 7h-7l3-7zM2 13h20v9H2v-9z" />
             </svg>
-            Clínica Cora y Mente
+            Clínica CorayMente
         </span>
     </div>
 

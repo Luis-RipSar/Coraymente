@@ -22,7 +22,7 @@
             <a href="{{ route('admin.dashboard') }}" class="nav-link">Panel</a>
             <a href="{{ route('admin.usuarios.index') }}" class="nav-link">Pacientes</a>
             <a href="{{ route('admin.profesionales.index') }}" class="nav-link">Profesionales</a>
-            <a href="{{ route('publicaciones.index') }}" class="nav-link">Publicaciones</a>
+            <a href="{{ route('admin.publicaciones.index') }}" class="nav-link">Publicaciones</a>
             <a href="{{ route('inicio') }}" class="nav-link">Volver a Inicio</a>
         </div>
     </div>
