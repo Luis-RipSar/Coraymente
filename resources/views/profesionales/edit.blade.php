@@ -3,7 +3,7 @@
 @section('header','Editar usuario')
 
 @section('content')
-<form action="{{ route('admin.usuarios.update',$usuario) }}" method="POST" class="usuarios-form">
+<form action="{{ route('admin.usuarios.update', $usuario) }}" method="POST" class="usuarios-form">
     @csrf @method('PUT')
 
     <h1 class="text-2xl font-bold mb-6">Editar usuario</h1>

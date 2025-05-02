@@ -63,11 +63,10 @@ class UserManagementController extends Controller
         if (!$request->filled('role_id')) {
             $data['role_id'] = 3;
         }
-        
 
         UserModel::create($data);
 
-        if($request->role_id === 2){
+        if($data['role_id'] == 2){
             return redirect()
             ->route('admin.profesionales.index')
             ->with('success', 'Profesional creado con éxito');
@@ -96,8 +95,8 @@ class UserManagementController extends Controller
             'nombre'    => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
             'telefono'  => 'required|string|max:50',
-            'direccion' => 'string|max:255',
-            'ciudad'    => 'string|max:100',
+            'direccion' => 'nullable|string|max:255',
+            'ciudad'    => 'nullable|string|max:100',
         ];
 
         if ($request->filled('password')) {
@@ -111,9 +110,14 @@ class UserManagementController extends Controller
         }
         $usuario->update($data);
 
+        if($usuario->role_id === 2){
+            return redirect()
+            ->route('admin.profesionales.index')
+            ->with('success', 'Profesional actualizado con éxito');
+        }
         return redirect()
             ->route('admin.usuarios.index')
-            ->with('success', 'Usuario actualizado correctamente');
+            ->with('success', 'Usuario actualizado con éxito');
     }
 
     public function destroy(UserModel $usuario)

@@ -5,7 +5,7 @@
 
 <div class="table-container">
     <h1>Pacientes</h1>
-    <a href="{{ route('admin.usuarios.create') }}" class="btn btn-primary mb-3">Crear nuevo usuario</a>
+    <a href="{{ route('admin.usuarios.create') }}" class="btn btn-primary mb-3">Crear nuevo paciente</a>
     <table class="table">
         <thead>
             <tr>
