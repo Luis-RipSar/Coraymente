@@ -10,18 +10,14 @@
 
         <div class="gallery-group">
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/adultos1.jpg') }}" alt="Adultos 1">
-                </div>
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/adultos2.jpg') }}" alt="Adultos 2">
-                </div>
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/adultos3.jpg') }}" alt="Adultos 3">
-                </div>
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/ninos1.jpg') }}" alt="Niños 1"></div>
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/ninos2.jpg') }}" alt="Niños 2"></div>
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/ninos3.jpg') }}" alt="Niños 3"></div>
-
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/mixto1.jpg') }}" alt="Mixto 1"></div>
-                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/mixto2.jpg') }}" alt="Mixto 2"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/adultos1.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/adultos2.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/adultos3.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/ninos1.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/ninos2.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/ninos3.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/mixto1.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/mixto2.jpg') }}" alt="imagen"></div>
             </div>
         </div>
 
