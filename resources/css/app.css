@@ -580,6 +580,7 @@
   .clinica-header h2 {
     font-size: 1.875rem;
     font-weight: 700;
+    text-align: center;
     color: #1F2937;
     margin-bottom: 0.25rem;
   }
@@ -589,12 +590,6 @@
   }
   .gallery-group {
     margin-bottom: 2rem;
-  }
-  .gallery-group-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin-bottom: 1rem;
   }
   .gallery-grid {
     display: grid;

@@ -15,7 +15,7 @@
                 {{-- Cabecera --}}
                 {{-- Nombre y datos básicos --}}
                 <h2 class="profesional-nombre">Lorena Sánchez Martínez</h2>
-                <p class="profesional-pro">Psicóloga/Neuropsicóloga</p>
+                <p class="profesional-pro">Psicóloga</p>
                 <span class="profesional-col">Nº COL.: </span>
 
                 {{-- Descripción breve --}}
@@ -31,7 +31,7 @@
                     desde el ámbito de la psicología, en inteligencia emocional, terapias de tercera generación y apego,
                     siendo mi última formación en terapia asistida con perros, a fin de unificar mis tres grandes
                     pasiones. Mi compromiso con la salud reside en ofrecer un acompañamiento terapéutico íntegro,
-                    cercano y adaptado a las necesidades y características de cada persona. 🫂 <br>
+                    cercano y adaptado a las necesidades y características de cada persona.<br>
                     Mi pasión por los animales es algo que me caracteriza desde bien pequeña. Desde siempre he estado
                     comprometida con el bienestar y cuidado de los animales, colaborando con asociaciones y procesos de
                     adopción, teniendo siempre claro que los animales iban a formar parte de vida a nivel personal y
@@ -50,7 +50,7 @@
                         <ul class="section-list" x-show="openSection === 'formacion'" x-collapse>
                             <li>Grado en Psicología (Universidad Miguel Hernández)</li>
                             <li>Máster en Psicología General Sanitaria (Universidad Miguel Hernández)</li>
-                            <li>Máster en Neuropsicología Clínica (Universidad Pablo de Olivade)</li>
+                            <li>Máster en Neuropsicología Clínica (Universidad Pablo de Olavide)</li>
                         </ul>
                     </div>
 
@@ -62,6 +62,17 @@
                             <span x-show="openSection === 'complementaria'">–</span> </button>
                         <ul class="section-list" x-show="openSection === 'complementaria'" x-collapse>
                             <li>Curso de Experto en Intervención Asistida con Perros (UDIMA)</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-group">
+                        <button class="section-toggle"
+                            @click="openSection = openSection === 'especialidad' ? null : 'especialidad'">
+                            Especialidad
+                            <span x-show="openSection !== 'especialidad'">+</span>
+                            <span x-show="openSection === 'especialidad'">–</span> </button>
+                        <ul class="section-list" x-show="openSection === 'especialidad'" x-collapse>
+                            <li>Neuropsicología</li>
                         </ul>
                     </div>
                 </div>
@@ -76,9 +87,9 @@
             <div class="profesional-content">
                 {{-- Cabecera --}}
                 {{-- Nombre y datos básicos --}}
-                <h2 class="profesional-nombre">Minerva Linares</h2>
+                <h2 class="profesional-nombre">Minerva Linares Martín-Calpena</h2>
                 <p class="profesional-pro">Terapeuta Ocupacional</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <span class="profesional-col">Nº COL.: CV-44600697</span>
 
                 {{-- Descripción breve --}}
                 <p class="profesional-desc mt-2 mb-4">
@@ -110,8 +121,7 @@
                             <span x-show="openSection === 'formacion'">–</span>
                         </button>
                         <ul class="section-list" x-show="openSection === 'formacion'" x-collapse>
-                            <li>Grado en Psicología (Universidad de Cantabria)</li>
-                            <li>Máster en Neuropsicología Clínica (UNED)</li>
+                            <li>Grado en Terapia Ocupacional (Universidad Rey Juan Carlos)</li>
                         </ul>
                     </div>
 
@@ -122,8 +132,12 @@
                             <span x-show="openSection !== 'complementaria'">+</span>
                             <span x-show="openSection === 'complementaria'">–</span> </button>
                         <ul class="section-list" x-show="openSection === 'complementaria'" x-collapse>
-                            <li>Curso de Comunicación Aumentativa (AAC)</li>
-                            <li>Taller de Terapia Miofuncional (2023)</li>
+                            <li>Curso completo de Integración sensorial y Autismo (Aytona- Universidad Sur de
+                                California) </li>
+                            <li>Curso Problemas de alimentación en la infancia (Aytona)</li>
+                            <li>Curso intervención en la selectividad alimentaria (Elena Yagüe)</li>
+                            <li>Curso intervención en Autismo en contextos naturales desde un enfoque basado en el
+                                desarrollo (Universidad de Almería)</li>
                         </ul>
                     </div>
                 </div>
@@ -203,7 +217,7 @@
                 {{-- Cabecera --}}
                 {{-- Nombre y datos básicos --}}
                 <h2 class="profesional-nombre">Clara San Nicolás</h2>
-                <p class="profesional-pro">Psicología/Psicología Infanto-Juvenil</p>
+                <p class="profesional-pro">Psicóloga</p>
                 <span class="profesional-col">Nº COL.: </span>
 
                 {{-- Descripción breve --}}
@@ -315,9 +329,9 @@
 
             <div class="profesional-content">
 
-                <h2 class="profesional-nombre">Inma Fulleda</h2>
-                <p class="profesional-pro">Terapeuta Ocupacional</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <h2 class="profesional-nombre">Inma Fulleda García</h2>
+                <p class="profesional-pro">Maestra en Audición y Lenguaje</p>
+                {{-- <span class="profesional-col">Nº COL.: </span> --}}
 
                 <p class="profesional-desc mt-2 mb-4">
                     Soy Inma, soy maestra de Audición y Lenguaje. Estoy graduada en el doble grado de
@@ -344,12 +358,13 @@
                             @click="openSection = openSection === 'formacion' ? null : 'formacion'">
                             Formación
                             <span x-show="openSection !== 'formacion'">+</span>
-                            <span x-show="openSection === 'formacion'">–</span>
+                            <span x-show="openSection === 'formacion'">-</span>
                         </button>
                         <ul class="section-list" x-show="openSection === 'formacion'" x-collapse>
-                            <li>Grado en </li>
-                            <li>Máster en </li>
-                            <li>Doctorado en </li>
+                            <li>Grado en Educación Infantil</li>
+                            <li>Grado en Educación Primaria</li>
+                            <li>Mención en Audición y lenguaje</li>
+                            <li>Máster en Atención Temprana</li>
                         </ul>
                     </div>
 
@@ -358,9 +373,9 @@
                             @click="openSection = openSection === 'complementaria' ? null : 'complementaria'">
                             Formación complementaria
                             <span x-show="openSection !== 'complementaria'">+</span>
-                            <span x-show="openSection === 'complementaria'">–</span> </button>
+                            <span x-show="openSection === 'complementaria'">-</span> </button>
                         <ul class="section-list" x-show="openSection === 'complementaria'" x-collapse>
-                            <li>Curso de ...</li>
+                            <li>Curso de Educación emocional: DE LA INTELIGENCIAS MÚLTIPLES AL MINDFULNESS</li>
                         </ul>
                     </div>
                 </div>
@@ -374,7 +389,7 @@
             <div class="profesional-content">
 
                 <h2 class="profesional-nombre">Elena Cuerda Navarro</h2>
-                <p class="profesional-pro">Logopedia</p>
+                <p class="profesional-pro">Logopeda</p>
                 <span class="profesional-col">Nº COL.: </span>
 
                 <p class="profesional-desc mt-2 mb-4">

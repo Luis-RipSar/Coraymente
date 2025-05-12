@@ -13,6 +13,7 @@
     .clinica-header h2 {
         font-size: 1.875rem;
         font-weight: 700;
+        text-align: center;
         color: $colorSubtitulo;
         margin-bottom: 0.25rem;
     }
@@ -24,13 +25,6 @@
 
     .gallery-group {
         margin-bottom: 2rem;
-    }
-
-    .gallery-group-title {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: $colorSubtitulo;
-        margin-bottom: 1rem;
     }
 
     .gallery-grid {

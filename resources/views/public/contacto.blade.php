@@ -7,21 +7,23 @@
     <div class="contact-info">
         <h1>Estamos aquí para ayudarte</h1>
         <p>
-            Si planeas visitarnos, ten en cuenta que estamos cerca de paradas de autobús atendidas por las líneas
-            <strong>3, 4 y 7</strong>, lo que hace que llegar hasta aquí sea muy sencillo y conveniente a través del
-            transporte público. <em>¡Esperamos verte pronto!</em> Si necesitas más detalles o información adicional,
-            no dudes en ponerte en contacto con nosotros a través de los datos de esta página.
+            ¿Te animas a formar parte de un proyecto hecho con mucho <strong>cora</strong> y <strong>mente</strong>?
+            <br>
+            Cuidate y dejanos cuidarte. ¡En CorayMente estaremos encantadas de ayudarte!
         </p>
 
         <ul class="contact-list">
             <li class="contact-item">
                 <svg class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.05 11a7 7 0 1113.9 0c0 5-6.95 10-6.95 10S5.05 16 5.05 11z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 14a3 3 0 100-6 3 3 0 000 6z" />
                 </svg>
                 <div class="contact-item-text">
                     <h3>Dirección</h3>
-                    <p>Av. de los Castros, n°53B, 39005<br>Santander, Cantabria</p>
+                    <p>Calle Mayor, 1, 03160 Almoradí, Alicante</p>
+                    <p>Calle Antonio Mora Ferrández, 16, 03202 Elche, Alicante</p>
                 </div>
             </li>
 
@@ -29,11 +31,11 @@
                 <svg class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
                     viewBox="0 0 24 24" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 10a1 1 0 011-1h3l2-3 2 3h3a1 1 0 011 1v1a2 2 0 01-2 2h-1l-1 2-1-2H9a2 2 0 01-2-2v-1z" />
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.341 1.09l-2.257 1.698a11.042 11.042 0 005.516 5.516l1.698-2.257a1 1 0 011.09-.341l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C7.82 21 3 16.18 3 10V5z" />
                 </svg>
                 <div class="contact-item-text">
                     <h3>Teléfono</h3>
-                    <p>(+34) 942 08 86 12<br>(+34) 644 85 38 11</p>
+                    <p>(+34) 688 70 48 85 (Almoradí)<br>(+34) 722 26 58 54 (Elche)</p>
                 </div>
             </li>
 
@@ -45,7 +47,19 @@
                 </svg>
                 <div class="contact-item-text">
                     <h3>Horario</h3>
-                    <p>Lunes a Viernes: 9:00 – 21:00
+                    <p>Lunes a Viernes: 9:00 – 20:00
+                </div>
+            </li>
+
+            <li class="contact-item">
+                <svg class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 8l7.5 5L18 8m0-2H3a2 2 0 00-2 2v10a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2z" />
+                </svg>
+                <div class="contact-item-text">
+                    <h3>Correo electrónico</h3>
+                    <p>info@clinicaejemplo.com</p>
                 </div>
             </li>
         </ul>
