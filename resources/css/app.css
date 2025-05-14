@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.bunny.net/css?family=Nunito");
-* {
+html {
   font-family: "Questrial", sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -11,7 +11,7 @@
     position: fixed;
     top: 3%;
     left: 10%;
-    width: 80%;
+    width: 75%;
     z-index: 100;
     background: #ffffff;
     border-radius: 0.5rem;
@@ -314,9 +314,9 @@
     transform: scale(1.05);
   }
 }
-* {
+html {
   font-family: "Questrial", sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -1161,7 +1161,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(162, 201, 216, 0.7);
   z-index: 2;
 }
 .fondo-container .fondo-video {

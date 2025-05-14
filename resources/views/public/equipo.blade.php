@@ -329,7 +329,7 @@
 
             <div class="profesional-content">
 
-                <h2 class="profesional-nombre">Inma Fulleda García</h2>
+                <h2 class="profesional-nombre">Inmaculada Fulleda García</h2>
                 <p class="profesional-pro">Maestra en Audición y Lenguaje</p>
                 {{-- <span class="profesional-col">Nº COL.: </span> --}}
 

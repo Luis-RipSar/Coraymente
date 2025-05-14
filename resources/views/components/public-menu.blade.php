@@ -37,7 +37,7 @@
             </div>
             <a href="{{ route('equipo') }}">Equipo</a>
             <a href="{{ route('servicios') }}">Servicios</a>
-            <a href="{{ route('formacion') }}">Formación</a>
+            {{-- <a href="{{ route('formacion') }}">Formación</a> --}}
             <a href="{{ route('publicaciones.index') }}">Publicaciones</a>
             <a href="{{ route('contacto') }}">Contacto</a>
         </div>
@@ -75,10 +75,24 @@
         @endauth
     </div>
 </nav>
-{{-- Menú desplegable móvil
-<div class="mobile-menu md:hidden" x-show="open" x-cloak @click.away="open = false">
+{{-- Menú desplegable móvil --}}
+{{-- <div class="mobile-menu md:hidden" x-show="open" x-cloak @click.away="open = false">
     <div class="public-links-mobile">
-        <a href="{{ route('clinicas') }}">Clínicas</a>
+        <div class="group">
+            <a href="#" class="nav-link">Clínicas</a>
+            <ul class="dropdown">
+                <li>
+                    <a href="{{ route('clinicas.almoradi') }}" class="dropdown-link">
+                        Almoradí
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('clinicas.elche') }}" class="dropdown-link">
+                        Elche
+                    </a>
+                </li>
+            </ul>
+        </div>
         <a href="{{ route('equipo') }}">Equipo</a>
         <a href="{{ route('servicios') }}">Servicios</a>
         <a href="{{ route('formacion') }}">Formación</a>

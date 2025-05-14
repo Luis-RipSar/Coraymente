@@ -11,7 +11,7 @@
         <h1 class="fondo-title">Cada gota en el mar cuenta</h1>
         <p class="fondo-subtitulo">Psicología, Terapia Ocupacional, Logopedia, Neurorrehabilitación y Terapia Asistida
             con Animales</p>
-        <a href="" class="btn btn-primary fondo-cta">Pedir cita</a>
+        <a href="{{ route('contacto') }}" class="btn btn-primary fondo-cta">Pedir cita</a>
     </div>
 </div>
 <div class="inicio">
@@ -20,8 +20,9 @@
     <section class="inicio__que-es">
         <h2>¿Qué es CorayMente?</h2>
         <p>CorayMente es un centro multidisciplinar ubicado tanto en Elche como Almoradí, el cual cuenta con un equipo
-            de profesionales de la psicología, neuropsicología, terapia ocupacional, logopedia y yoga, con amplia
-            experiencia y formación en infancia y adolescencia, adultez y vejez, siendo expertas en neurodivergencia.
+            de profesionales de la psicología, neurorrehabilitación, terapia ocupacional, logopedia y terapia asistida
+            con animales, con amplia experiencia y formación en infancia y adolescencia, adultez y vejez, siendo
+            expertas en neurodivergencia.
         </p>
         <a href="" class="btn cita-btn">Pide tu cita</a>
     </section>
