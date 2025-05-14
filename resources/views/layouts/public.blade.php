@@ -23,7 +23,7 @@
 <body class="font-sans text-gray-900 antialiased">
     @include('components.public-menu')
 
-    <main class="py-10 px-4">
+    <main>
         @yield('content')
     </main>
     @include('components.public-footer')
