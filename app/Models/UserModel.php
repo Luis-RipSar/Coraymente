@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
@@ -58,5 +59,15 @@ class UserModel extends Authenticatable
     public function role()
     {
         return $this->belongsTo(RoleModel::class, 'rol_id');
+    }
+
+    public function pacientes(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            self::class,       // modelo destino
+            'citas',           // tabla pivote
+            'id_profesional',  // FK en la pivote apuntando a este usuario
+            'id_usuario'      // FK en la pivote apuntando al paciente
+        )->distinct();        // para evitar duplicados si hay varias citas
     }
 }

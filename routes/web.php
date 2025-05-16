@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfesionalController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\UserManagementController;
@@ -47,16 +48,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         }
         return view('dashboard');
     })->name('dashboard');
-
-    // Perfil de usuario
-    Route::get('/profile', [ProfileController::class, 'edit'])
-         ->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])
-         ->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])
-         ->name('profile.destroy');
-
-    
 });
 
 
@@ -118,5 +109,27 @@ Route::middleware(['auth','verified', AdminMiddleware::class])
              ->except(['index']);
      });
 
+/*
+|--------------------------------------------------------------------------
+| Profesional Routes
+|--------------------------------------------------------------------------
+*/
+Route::middleware(['auth','verified'])
+     ->prefix('profesional')
+     ->name('profesional.')
+     ->group(function(){
+         // Dashboard
+         Route::get('dashboard', [ProfesionalController::class, 'index'])
+              ->name('dashboard');
+
+         Route::get('perfil', [ProfesionalController::class, 'settings'])
+              ->name('perfil');
+
+         Route::put('perfil', [ProfesionalController::class, 'updatePerfil'])
+              ->name('perfil.update');
+
+         Route::put('password', [ProfesionalController::class, 'updatePassword'])
+               ->name('password.update');
+     });
 
 require __DIR__.'/auth.php';

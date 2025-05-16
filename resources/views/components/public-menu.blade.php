@@ -58,9 +58,16 @@
             {{-- Dropdown con “Perfil” y “Cerrar sesión” --}}
             <ul class="dropdown-sesion">
                 <li>
+                    @if (auth()->user()->role_id == '1')
                     <a href="{{ route('admin.dashboard') }}" class="dropdown-sesion-link">
                         Panel de Control
                     </a>
+                    @endif
+                    @if (auth()->user()->role_id == '2')
+                    <a href="{{ route('profesional.dashboard') }}" class="dropdown-sesion-link">
+                        Panel de Control
+                    </a>
+                    @endif
                 </li>
                 <li>
                     <form method="POST" action="{{ route('logout') }}">

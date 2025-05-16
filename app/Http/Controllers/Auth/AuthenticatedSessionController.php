@@ -42,12 +42,19 @@ class AuthenticatedSessionController extends Controller
         // Aquí chequeamos el role_id para redirigir:
         $user = $request->user();
 
+        // Si es admin redirigimos a admin.dashboard
         if ($user->role_id === 1) {
-            // admin → a su dashboard
             return redirect()->route('admin.dashboard');
         }
-
-        // resto → dashboard “normal”
+        
+        // Si es profesional redirigimos a profesional.dashboard
+        if ($user->role_id == 2) {
+            return redirect()->route('profesional.dashboard');
+        }
+        // Si es paciente redirigimos a paciente.dashboard
+        // if ($user->role_id == 3) {
+        //     return redirect()->route('paciente.dashboard');
+        // }
         return redirect()->intended('/dashboard');
     }
 
