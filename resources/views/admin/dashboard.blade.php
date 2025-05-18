@@ -5,7 +5,7 @@
 <div class="table-container">
     <h1>Panel de Administración</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         {{-- Ejemplo de tarjeta resumen --}}
         <div class="bg-white shadow rounded-lg p-4">
             <h2 class="text-sm font-semibold text-gray-500">Usuarios totales</h2>
@@ -20,6 +20,11 @@
         <div class="bg-white shadow rounded-lg p-4">
             <h2 class="text-sm font-semibold text-gray-500">Pacientes</h2>
             <p class="text-2xl font-bold">{{ \App\Models\UserModel::where('role_id',3)->count() }}</p>
+        </div>
+
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="text-sm font-semibold text-gray-500">Publicaciones</h2>
+            <p class="text-2xl font-bold">{{ \App\Models\Publication::count() }}</p>
         </div>
 
         <div class="bg-white shadow rounded-lg p-4">

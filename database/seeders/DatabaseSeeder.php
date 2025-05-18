@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             AdminUserSeeder::class,
             PublicationsSeeder::class,
             UserSeeder::class,
+            CitasSeeder::class,
         ]);
         
     }

@@ -188,8 +188,9 @@
                             <span x-show="openSection === 'formacion'">–</span>
                         </button>
                         <ul class="section-list" x-show="openSection === 'formacion'" x-collapse>
-                            <li>Grado en Psicología (Universidad de Cantabria)</li>
-                            <li>Máster en Neuropsicología Clínica (UNED)</li>
+                            <li>Grado en Terapia Ocupacional ( Universidad Miguel Hernández)</li>
+                            <li>Máster en Gerontología y modelo de Atención Centrada en la Persona ( ACP) ( Universidad
+                                Internacional de Valencia)</li>
                         </ul>
                     </div>
 
@@ -200,8 +201,11 @@
                             <span x-show="openSection !== 'complementaria'">+</span>
                             <span x-show="openSection === 'complementaria'">–</span> </button>
                         <ul class="section-list" x-show="openSection === 'complementaria'" x-collapse>
-                            <li>Curso de Comunicación Aumentativa (AAC)</li>
-                            <li>Taller de Terapia Miofuncional (2023)</li>
+                            <li>Curso integración sensorial y TEA</li>
+                            <li>Curso de alimentación en TEA</li>
+                            <li>Curso de intervención en contextos naturales en atención temprana</li>
+                            <li>Curso de acoso en colectivo TEA</li>
+                            <li>Curso de detección, diagnóstico e intervención en atención temprana</li>
                         </ul>
                     </div>
                 </div>

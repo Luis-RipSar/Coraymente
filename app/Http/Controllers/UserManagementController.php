@@ -28,7 +28,7 @@ class UserManagementController extends Controller
         $profesionales = UserModel::where('role_id', 2)
                          ->with('role')
                          ->get();
-        return view('profesionales.index', compact('profesionales'));
+        return view('profesional.index', compact('profesionales'));
     }
 
     public function create()
@@ -39,7 +39,7 @@ class UserManagementController extends Controller
     public function profesionalCreate()
     {
         $rol = RoleModel::findOrFail(2);
-        return view('profesionales.create', compact('rol'));
+        return view('profesional.create', compact('rol'));
     }
 
     public function store(Request $request)
@@ -85,7 +85,7 @@ class UserManagementController extends Controller
     public function profesionalEdit(UserModel $usuario)
     {
         $roles = RoleModel::all();
-        return view('profesionales.edit', compact('usuario', 'roles'));
+        return view('profesional.edit', compact('usuario', 'roles'));
     }
 
     public function update(Request $request, UserModel $usuario)
@@ -126,11 +126,11 @@ class UserManagementController extends Controller
             $usuario->delete();    
             return redirect()
                 ->route('admin.profesionales.index')
-                ->with('success', 'Profesional eliminado');
+                ->with('danger', 'Profesional eliminado');
         }
         $usuario->delete();
         return redirect()
             ->route('admin.usuarios.index')
-            ->with('success', 'Usuario eliminado');
+            ->with('danger', 'Usuario eliminado');
     }
 }

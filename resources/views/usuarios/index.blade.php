@@ -6,6 +6,12 @@
 <div class="table-container">
     <h1>Pacientes</h1>
     <a href="{{ route('admin.usuarios.create') }}" class="btn btn-primary mb-3">Crear nuevo paciente</a>
+    @if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+    @if(session('danger'))
+    <div class="alert alert-danger">{{ session('danger') }}</div>
+    @endif
     <table class="table">
         <thead>
             <tr>
@@ -29,11 +35,10 @@
                 <td>{{ $usuario->ciudad }}</td>
                 <td>
                     <a href="{{ route('admin.usuarios.edit', $usuario) }}" class="btn btn-sm btn-warning">Editar</a>
-                    <form action="{{ route('admin.usuarios.destroy', $usuario) }}" method="POST"
-                        style="display:inline;">
+                    <form action="{{ route('admin.usuarios.destroy', $usuario) }}" method="POST">
                         @csrf @method('DELETE')
                         <button type="submit" class="btn btn-sm btn-danger"
-                            onclick="return confirm('¿Eliminar a {{ $usuario->nombre }}?')">Eliminar</button>
+                            onclick="return confirm('Borrar a {{ $usuario->nombre }}?')">Borrar</button>
                     </form>
                 </td>
             </tr>

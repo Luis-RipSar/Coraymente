@@ -1,11 +1,19 @@
 @extends('layouts.admin')
 
-{{-- resources/views/profesionales/index.blade.php --}}
 @section('content')
 
 <div class="table-container">
     <h1>Profesionales</h1>
     <a href="{{ route('admin.profesionales.create') }}" class="btn btn-primary mb-3">Crear nuevo profesional</a>
+
+    {{-- Mensajes de éxito o error --}}
+    @if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+    @if(session('danger'))
+    <div class="alert alert-danger">{{ session('danger') }}</div>
+    @endif
+
     <table class="table">
         <thead>
             <tr>
@@ -30,7 +38,7 @@
                         style="display:inline;">
                         @csrf @method('DELETE')
                         <button type="submit" class="btn btn-sm btn-danger"
-                            onclick="return confirm('¿Eliminar a {{ $usuario->nombre }}?')">Eliminar</button>
+                            onclick="return confirm('Borrar a {{ $usuario->nombre }}?')">Borrar</button>
                     </form>
                 </td>
             </tr>

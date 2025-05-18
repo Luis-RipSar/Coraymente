@@ -48,16 +48,14 @@ class PublicationController extends Controller
         'imagen'     => 'nullable|image|mimes:jpg,jpeg,png,gif,webp|max:40960',
     ]);
 
-    // Si subieron imagen, muévela a public/imagenes/publicaciones
     if ($request->hasFile('imagen')) {
         $file     = $request->file('imagen');
         $filename = Str::random(4) . '_' . time() . '.' . $file->extension();
         $file->move(public_path('imagenes/publicaciones'), $filename);
-        // Guardamos la ruta relativa en DB
         $data['image_url'] = 'imagenes/publicaciones/' . $filename;
     }
+    unset($data['imagen']);
 
-    // Creamos el UUID y el resto de campos
     $data['id'] = (string) Str::uuid();
     $data['published_at'] = now();
 
@@ -71,24 +69,56 @@ class PublicationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Publication $publicacion)
     {
-        //
+        return view('admin.publicaciones.edit', compact('publicacion'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $data = $request->validate([
+            'titulo'     => 'required|string|max:255',
+            'resumen'    => 'required|string',
+            'body'       => 'required|string',
+            'imagen'     => 'nullable|image|mimes:jpg,jpeg,png,gif,webp|max:40960',
+        ]);
+
+        if ($request->hasFile('imagen')) {
+            $file     = $request->file('imagen');
+            $filename = Str::random(4) . '_' . time() . '.' . $file->extension();
+            $file->move(public_path('imagenes/publicaciones'), $filename);
+            $data['image_url'] = 'imagenes/publicaciones/' . $filename;
+        }else{
+            $data['image_url'] = $request->image_url;
+        }
+        unset($data['imagen']);
+
+        Publication::where('id', $request->id)->update($data);
+
+        return redirect()
+            ->route('admin.publicaciones.index')
+            ->with('success', 'Publicación con título ' . $data['titulo'] . ', actualizada con éxito');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Publication $publicacion)
     {
-        //
+        if ($publicacion->image_url) {
+            $path = public_path($publicacion->image_url);
+            if (file_exists($path)) {
+                unlink($path);
+            }
+        }
+
+        $publicacion->delete();
+
+        return redirect()
+            ->route('admin.publicaciones.index')
+            ->with('success', 'Publicación con título "' . $publicacion->titulo . '", eliminada con éxito');
     }
 }

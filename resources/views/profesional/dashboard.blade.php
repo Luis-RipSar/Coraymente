@@ -57,23 +57,55 @@
                             Fecha</th>
                         <th
                             class="px-5 py-3 border-b-2 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                            Hora</th>
+                            Estado</th>
                         <th
                             class="px-5 py-3 border-b-2 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                            Estado</th>
+                            Acción</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse($citas as $cita)
                     <tr class="hover:bg-gray-50">
-                        <td class="px-5 py-5 border-b text-sm">{{ $cita->paciente->nombre }}</td>
-                        <td class="px-5 py-5 border-b text-sm">{{ $cita->fecha->format('d/m/Y') }}</td>
-                        <td class="px-5 py-5 border-b text-sm">{{ $cita->hora }}</td>
-                        <td class="px-5 py-5 border-b text-sm capitalize">{{ $cita->estado }}</td>
+                        <td class="px-5 py-5 border-b text-sm">{{ $cita->usuario->nombre }}</td>
+                        <td class="px-5 py-5 border-b text-sm">{{ \Carbon\Carbon::parse($cita->fecha)->format('d/m/Y
+                            H:i') }}
+                        </td>
+
+                        {{-- Celda con formulario inline para cambiar sólo el estado --}}
+                        <td class="px-5 py-5 border-b text-sm">
+                            <form action="{{ route('profesional.citas.update', $cita) }}" method="POST"
+                                class="flex items-center space-x-2">
+                                @csrf
+                                @method('PATCH')
+
+                                <select name="estado"
+                                    class="block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:border-indigo-300">
+                                    @foreach(['pendiente','confirmada','cancelada'] as $st)
+                                    <option value="{{ $st }}" @selected($cita->estado === $st)>
+                                        {{ ucfirst($st) }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                        </td>
+                        <td class="px-5 py-5 border-b text-sm">
+                            <input type="hidden" name="id" value="{{ $cita->id }}" required>
+                            <input type="hidden" name="id_usuario" value="{{ $cita->usuario->id }}" required>
+                            <input type="hidden" name="id_profesional" value="{{ $cita->profesional->id }}">
+                            <input type="hidden" name="sede" value="{{ $cita->sede  }}" required>
+                            <input type="hidden" name="sala" value="{{ $cita->sala  }}" required>
+                            <input type="hidden" name="motivo" value="{{ $cita->motivo  }}" required>
+                            <input type="hidden" name="fecha" value="{{ $cita->fecha  }}" required>
+                            <button type="submit"
+                                class="inline-flex px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                                Guardar
+                            </button>
+                            </form>
+                        </td>
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="4" class="px-5 py-5 text-center text-sm text-gray-500">No tienes citas programadas.
+                        <td colspan="4" class="px-5 py-5 text-center text-sm text-gray-500">
+                            No tienes citas programadas.
                         </td>
                     </tr>
                     @endforelse

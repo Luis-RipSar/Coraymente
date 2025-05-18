@@ -15,6 +15,8 @@
             text-align: center;
             text-transform: capitalize;
         }
+
+
     }
 
     .pub-form__group {
@@ -67,7 +69,7 @@
     }
 
     .btn-pub-save {
-        background: #3B82F6; // blue-500
+        background: #3B82F6;
         color: $blanco;
 
         &:hover {
@@ -76,10 +78,11 @@
     }
 
     .btn-pub-cancel {
-        color: $colorTexto;
+        color: $blanco;
+        background: darken($color: red, $amount: 5);
 
         &:hover {
-            background: #D1D5DB;
+            background: darkred;
         }
     }
 

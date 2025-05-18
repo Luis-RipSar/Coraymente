@@ -11,8 +11,12 @@ class ProfesionalController extends Controller
     public function index(Request $request)
     {
         $profesional = $request->user();
-        $pacientes = $profesional->pacientes()->get();   // relación hasMany
-        $citas = $profesional->citas()->orderBy('fecha')->get();      // relación hasMany
+        $pacientes = $profesional->pacientes()->get();
+        $citas = $profesional
+        ->citas()
+        ->with('usuario')
+        ->orderBy('fecha', 'desc')
+        ->get();
 
         return view('profesional.dashboard', compact('pacientes','citas'));
     }

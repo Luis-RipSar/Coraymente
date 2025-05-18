@@ -43,7 +43,7 @@
                 <!-- Botón de login -->
                 <div class="mt-4">
                     <button type="submit" class="login-button">
-                        {{ __('Inicio Sesion') }}
+                        {{ __('Inicio Sesión') }}
                     </button>
                 </div>
             </form>

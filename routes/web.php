@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\CitasController;
 use App\Http\Controllers\ProfesionalController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Middleware\AdminMiddleware;
@@ -95,15 +95,26 @@ Route::middleware(['auth','verified', AdminMiddleware::class])
               ->name('publicaciones.index');
           Route::get('publicaciones/create', [PublicationController::class,'create'])
               ->name('publicaciones.create');
-          Route::get('publicaciones/{publication}/edit', [PublicationController::class,'edit'])
+          Route::get('publicaciones/{publicacion}/edit', [PublicationController::class,'edit'])
               ->name('publicaciones.edit');
-          Route::delete('publicaciones/{publication}', [PublicationController::class,'destroy'])
+          Route::delete('publicaciones/{publicacion}', [PublicationController::class,'destroy'])
               ->name('publicaciones.destroy');
           Route::post('publicaciones', [PublicationController::class,'store'])
                ->name('publicaciones.store');
-          Route::put('publicaciones/{publication}', [PublicationController::class,'update'])
+          Route::put('publicaciones/{publicacion}', [PublicationController::class,'update'])
                ->name('publicaciones.update');
 
+          //Gestion de citas
+          Route::get('citas', [CitasController::class,'index'])
+              ->name('citas.index');
+          Route::get('citas/create', [CitasController::class,'create'])
+              ->name('citas.create');
+          Route::delete('citas/{cita}', [CitasController::class,'destroy'])
+              ->name('citas.destroy');
+          Route::post('citas', [CitasController::class,'store'])
+               ->name('citas.store');
+          Route::put('citas', [CitasController::class, 'update'])
+               ->name('citas.update');
                
           Route::resource('usuarios', UserManagementController::class)
              ->except(['index']);
@@ -121,15 +132,16 @@ Route::middleware(['auth','verified'])
          // Dashboard
          Route::get('dashboard', [ProfesionalController::class, 'index'])
               ->name('dashboard');
-
          Route::get('perfil', [ProfesionalController::class, 'settings'])
               ->name('perfil');
-
          Route::put('perfil', [ProfesionalController::class, 'updatePerfil'])
               ->name('perfil.update');
-
          Route::put('password', [ProfesionalController::class, 'updatePassword'])
                ->name('password.update');
+          Route::get('citas', [CitasController::class,'index'])
+              ->name('citas.index');
+         Route::patch('citas/{cita}', [CitasController::class,'update'])
+              ->name('citas.update');
      });
 
 require __DIR__.'/auth.php';

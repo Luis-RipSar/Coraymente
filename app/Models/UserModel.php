@@ -53,9 +53,11 @@ class UserModel extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function citas() {
-        return $this->hasMany(CitaModel::class, 'id_usuario');
+        return $this->hasMany(CitaModel::class, 'id_profesional');
     }
+    
     public function role()
     {
         return $this->belongsTo(RoleModel::class, 'rol_id');

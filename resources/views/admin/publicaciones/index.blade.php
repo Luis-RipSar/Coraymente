@@ -6,6 +6,9 @@
     <a href="{{ route('admin.publicaciones.create') }}" class="btn-primary mb-4">
         Nueva publicación
     </a>
+    @if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
     <table class="table">
         <thead>
             <tr>
@@ -36,7 +39,7 @@
                     : 'No publicado' }}
                 </td>
                 <td class="space-x-2">
-                    <a href="{{ route('admin.publicaciones.edit',$pub) }}" class="btn-warning">
+                    <a href="{{ route('admin.publicaciones.edit', $pub) }}" class="btn-warning">
                         Editar
                     </a>
                     <form action="{{ route('admin.publicaciones.destroy',$pub) }}" method="POST" class="inline">
