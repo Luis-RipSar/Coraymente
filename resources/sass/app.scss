@@ -1,20 +1,17 @@
-// Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
-
 // Variables
-@import 'variables';
-@import 'public-menu';
-@import 'login';
-@import 'contacto';
-@import 'public-footer';
-@import 'publicaciones';
-@import 'publicacion';
-@import 'clinicas';
-@import 'equipo';
-@import 'servicios';
-@import 'admin-usuarios';
-@import 'admin-publicaciones';
-@import 'inicio';
+@use 'variables';
+@use 'public-menu';
+@use 'login';
+@use 'contacto';
+@use 'public-footer';
+@use 'publicaciones';
+@use 'publicacion';
+@use 'clinicas';
+@use 'equipo';
+@use 'servicios';
+@use 'admin-usuarios';
+@use 'admin-publicaciones';
+@use 'inicio';
 
 
 [x-cloak] {
