@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use "sass:color";
+
 @layer components {
 
     /* Layout principal */
@@ -85,7 +88,7 @@
     }
 
     .servicios-menu .submenu-link:hover {
-        background: lighten($color1, 10%);
+        background: color.adjust($color1, $lightness: 10%);
     }
 
     /* Enlaces de submenú activos */
@@ -95,7 +98,7 @@
     }
 
     .servicios-menu .submenu-link.active:hover {
-        background: darken($color1, 10%);
+        background: color.adjust($color1, $lightness: -10%);
     }
 
     /* Contenido de la sección */

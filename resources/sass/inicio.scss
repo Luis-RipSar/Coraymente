@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use "sass:color";
+
 .fondo-container {
     position: relative;
     width: 100%;
@@ -169,12 +172,12 @@
         .servicios-grid {
             display: grid;
             gap: 5.5rem;
+            justify-items: center;
 
             @media(min-width: 640px) {
                 grid-template-columns: repeat(auto-fill, minmax(512px, 1fr));
             }
 
-            justify-items: center;
         }
 
         .card-flip {
@@ -434,7 +437,7 @@
                     }
 
                     .opinion-card {
-                        background-color: lighten($color: $color3, $amount: 5);
+                        background-color: color.adjust($color3, $lightness: 5%);
                         padding: 1.5rem;
                         border-radius: .5rem;
                         overflow: hidden;

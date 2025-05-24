@@ -1,4 +1,6 @@
-/* resources/css/publicaciones.css */
+@use './variables' as *;
+@use "sass:color";
+
 @layer components {
     .publicaciones-container {
         max-width: 1120px;

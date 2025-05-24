@@ -1,4 +1,6 @@
-/* resources/css/clinicas.css */
+@use './variables' as *;
+@use "sass:color";
+
 @layer components {
     .clinicas-container {
         max-width: 75%;
