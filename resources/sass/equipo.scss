@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use "sass:color";
+
 @layer components {
     .equipo-container {
         width: 80%;

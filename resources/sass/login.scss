@@ -1,4 +1,6 @@
-/* Estilos del login (extraído) */
+@use './variables' as *;
+@use "sass:color";
+
 @layer components {
     .login-container {
         display: flex;
@@ -42,7 +44,7 @@
     }
 
     .login-button:hover {
-        background-color: darken($color2, 10%);
+        background: color.adjust($color2, $lightness: -10%);
         scale: 1.05;
     }
 

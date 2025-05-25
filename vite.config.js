@@ -5,7 +5,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/app.scss',   // ← aquí tu master SCSS
+                'resources/sass/app.scss',
                 'resources/js/app.js',
             ],
             refresh: true,
@@ -14,9 +14,6 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                // Importa siempre tus variables antes de cada fichero SCSS
-                additionalData: `@import "resources/sass/_variables.scss";`,
-                // si quieres resolver imports desde node_modules:
                 includePaths: ['node_modules'],
             },
         },

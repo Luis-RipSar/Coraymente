@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use "sass:color";
+
 @layer components {
     .public-nav {
         position: fixed;
