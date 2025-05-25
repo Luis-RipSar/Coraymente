@@ -4,7 +4,7 @@
             <!-- Logo y enlaces izquierda -->
             <div class="public-nav-inner" style="padding: 1rem 0;">
                 <a href="{{ route('inicio') }}" class="public-logo">
-                    <img src="{{ asset('imagenes/logo_vector.png') }}" alt="Coraymente">
+                    <img src="{{ asset('public/imagenes/logo_vector.png') }}" alt="Coraymente">
                 </a>
 
                 <!-- Enlaces de navegación (escritorio) -->

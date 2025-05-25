@@ -9,7 +9,7 @@
         {{-----------------LORENA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
             {{-- Foto arriba --}}
-            <img src="{{ asset('imagenes/equipo/jefas.jpg') }}" alt="Lorena Sanchez" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/jefas.jpg') }}" alt="Lorena Sanchez" class="profesional-avatar">
 
             <div class="profesional-content">
                 {{-- Cabecera --}}
@@ -82,7 +82,7 @@
         {{-----------------MINERVA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
             {{-- Foto arriba --}}
-            <img src="{{ asset('imagenes/equipo/jefas.jpg') }}" alt="Minerva Linares" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/jefas.jpg') }}" alt="Minerva Linares" class="profesional-avatar">
 
             <div class="profesional-content">
                 {{-- Cabecera --}}
@@ -147,7 +147,7 @@
         {{-----------------RAQUEL-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
             {{-- Foto arriba --}}
-            <img src="{{ asset('imagenes/equipo/raquel.jpg') }}" alt="Raquel Cristo" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/raquel.jpg') }}" alt="Raquel Cristo" class="profesional-avatar">
 
             <div class="profesional-content">
                 {{-- Cabecera --}}
@@ -215,7 +215,8 @@
         {{-----------------CLARA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
             {{-- Foto arriba --}}
-            <img src="{{ asset('imagenes/equipo/clara.jpg') }}" alt="Clara San Nicolás" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/clara.jpg') }}" alt="Clara San Nicolás"
+                class="profesional-avatar">
 
             <div class="profesional-content">
                 {{-- Cabecera --}}
@@ -272,7 +273,7 @@
         </div>
         {{-----------------NOEMI-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
-            <img src="{{ asset('imagenes/equipo/noemi.jpg') }}" alt="Noemi Martínez" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/noemi.jpg') }}" alt="Noemi Martínez" class="profesional-avatar">
 
             <div class="profesional-content">
 
@@ -329,7 +330,7 @@
         </div>
         {{-----------------INMA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
-            <img src="{{ asset('imagenes/equipo/inma.jpg') }}" alt="Inma Fulleda" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/inma.jpg') }}" alt="Inma Fulleda" class="profesional-avatar">
 
             <div class="profesional-content">
 
@@ -388,7 +389,7 @@
         </div>
         {{-----------------ELENA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
-            <img src="{{ asset('imagenes/equipo/jefas.jpg') }}" alt="Elena Cuerda" class="profesional-avatar">
+            <img src="{{ asset('public/imagenes/equipo/jefas.jpg') }}" alt="Elena Cuerda" class="profesional-avatar">
 
             <div class="profesional-content">
 

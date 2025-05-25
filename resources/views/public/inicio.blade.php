@@ -4,7 +4,7 @@
 <div class="fondo-container">
     <div class="fondo-capa"></div>
     <video class="fondo-video" autoplay muted loop playsinline>
-        <source src="{{ asset('videos/video_ini.mp4') }}" type="video/mp4">
+        <source src="{{ asset('public/videos/video_ini.mp4') }}" type="video/mp4">
         Tu navegador no soporta la etiqueta <code>video</code>.
     </video>
     <div class="fondo-overlay">
@@ -36,7 +36,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/psicologia.jpg" alt="Psicología">
+                        <img src="public/imagenes/servicios/psicologia.jpg" alt="Psicología">
                         <span class="card-title">Psicología Clínica</span>
                     </div>
                     <div class="card-back">
@@ -51,7 +51,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/taa.jpg" alt="Terapia Asistida con Animales">
+                        <img src="public/imagenes/servicios/taa.jpg" alt="Terapia Asistida con Animales">
                         <span class="card-title">Terapia Asistida con Animales</span>
                     </div>
                     <div class="card-back">
@@ -66,7 +66,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/to.jpg" alt="Terapia Ocupacional">
+                        <img src="public/imagenes/servicios/to.jpg" alt="Terapia Ocupacional">
                         <span class="card-title">Terapia Ocupacional</span>
                     </div>
                     <div class="card-back">
@@ -81,7 +81,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/logopedia.jpg" alt="Logopedia">
+                        <img src="public/imagenes/servicios/logopedia.jpg" alt="Logopedia">
                         <span class="card-title">Logopedia</span>
                     </div>
                     <div class="card-back">
@@ -97,7 +97,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/neuro.jpg" alt="Neurorrehabilitacion">
+                        <img src="public/imagenes/servicios/neuro.jpg" alt="Neurorrehabilitacion">
                         <span class="card-title">Neurorrehabilitación</span>
                     </div>
                     <div class="card-back">
@@ -114,7 +114,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/ae.jpg" alt="Apoyo educación">
+                        <img src="public/imagenes/servicios/ae.jpg" alt="Apoyo educación">
                         <span class="card-title">Apoyo a la educación psicopedagógica
                         </span>
                     </div>
@@ -134,7 +134,7 @@
         <h2>Sobre Nosotros</h2>
         <div class="sobre-list">
             <div class="sobre-item">
-                <img src="imagenes/iconos/cora.png" alt="Cora">
+                <img src="public/imagenes/iconos/cora.png" alt="Cora">
                 <div class="sobre-desc">
                     <h3>Visión</h3>
                     <p>Nuestro objetivo es ofrecer a la entidad interesada un recurso
@@ -144,7 +144,7 @@
                 </div>
             </div>
             <div class="sobre-item">
-                <img src="imagenes/iconos/mente.png" alt="Mente">
+                <img src="public/imagenes/iconos/mente.png" alt="Mente">
                 <div class="sobre-desc">
                     <h3>Misión</h3>
                     <p>Nuestra misión es ofrecer un modelo de intervención basado en
@@ -156,7 +156,7 @@
             </div>
 
             <div class="sobre-item">
-                <img src="imagenes/iconos/ancla.png" alt="Ancla">
+                <img src="public/imagenes/iconos/ancla.png" alt="Ancla">
                 <div class="sobre-desc">
                     <h3>Valores</h3>
                     <p>Nos gusta la cercanía, transmitir sensación de lugar seguro, el
@@ -177,56 +177,56 @@
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/jefas.jpg" alt="Ivanna Crespo">
+                        <img class="avatar" src="public/imagenes/equipo/jefas.jpg" alt="Lorena Sánchez Martínez">
                     </div>
                     <h3>Lorena Sánchez Martínez</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/kala.jpg" alt="Kala">
+                        <img class="avatar" src="public/imagenes/equipo/kala.jpg" alt="Kala">
                     </div>
                     <h3>Kala</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/jefas.jpg" alt="Minerva Linares Martín-Calpena">
+                        <img class="avatar" src="public/imagenes/equipo/jefas.jpg" alt="Minerva Linares Martín-Calpena">
                     </div>
                     <h3>Minerva Linares Martín-Calpena</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/raquel.jpg" alt="Raquel Cristo">
+                        <img class="avatar" src="public/imagenes/equipo/raquel.jpg" alt="Raquel Cristo">
                     </div>
                     <h3>Raquel Cristo</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/clara.jpg" alt="Clara San Nicolás">
+                        <img class="avatar" src="public/imagenes/equipo/clara.jpg" alt="Clara San Nicolás">
                     </div>
                     <h3>Clara San Nicolás</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/noemi.jpg" alt="Noemi Martínez">
+                        <img class="avatar" src="public/imagenes/equipo/noemi.jpg" alt="Noemi Martínez">
                     </div>
                     <h3>Noemi Martínez</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/inma.jpg" alt="Inma Fulleda García">
+                        <img class="avatar" src="public/imagenes/equipo/inma.jpg" alt="Inma Fulleda García">
                     </div>
                     <h3>Inma Fulleda García</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/elena.jpg" alt="Elena Cuerda Navarro">
+                        <img class="avatar" src="public/imagenes/equipo/elena.jpg" alt="Elena Cuerda Navarro">
                     </div>
                     <h3>Elena Cuerda Navarro</h3>
                 </div>
@@ -243,7 +243,7 @@
         <h2>Colaboraciones</h2>
         <div class="colab-slider">
             @foreach(['colab1.png','colab2.png','colab3.png'] as $logo)
-            <div class="colab-item"><img src="{{ asset(" imagenes/colaboradores/$logo") }}" alt=""></div>
+            <div class="colab-item"><img src="{{ asset(" public/imagenes/colaboradores/$logo") }}" alt=""></div>
             @endforeach
         </div>
     </section>
@@ -262,7 +262,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>100% recomendado
@@ -278,7 +278,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>Un espacio súper multidisciplinar para los niños, un establecimiento moderno y con toques a
@@ -293,7 +293,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>100 %Recomendable muy profesionales y atentas con el trato,para mí el centro 1° en Almoradí y
@@ -307,7 +307,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>Gran profesional, simpática, amable, diligente !Que suerte tenerla en la Vega Baja!!!!</p>
@@ -325,7 +325,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>Trato de 10.
@@ -341,7 +341,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>Desde que comencé mis sesiones hace seis meses, he experimentado una transformación
@@ -357,7 +357,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>Lorena es una profesional de 10. Me ha ayudado muchísimo y nunca había encontrado ninguna
@@ -373,7 +373,7 @@
                                 <div class="stars">★★★★★</div>
                             </div>
                             <div class="col-derecha">
-                                <img src="imagenes/google-logo.png" alt="Google">
+                                <img src="public/imagenes/google-logo.png" alt="Google">
                             </div>
                         </div>
                         <p>Sin duda Lorena me ha cambiado la vida. Llevo años acudiendo a ella y no pudo ser una
@@ -392,10 +392,10 @@
         </div>
         <div class="opiniones-container">
             <div>
-                <center><img src="imagenes/opinion_almoradi.png" class="qr" alt="QR"></center>
+                <center><img src="public/imagenes/opinion_almoradi.png" class="qr" alt="QR"></center>
             </div>
             <div>
-                <center><img src="imagenes/opinion_elche.png" class="qr" alt="QR"></center>
+                <center><img src="public/imagenes/opinion_elche.png" class="qr" alt="QR"></center>
             </div>
         </div>
         <h3>Ahora es tu momento, deja tu opinión</h3>
@@ -423,9 +423,5 @@
             </div>
         </div>
     </section>
-
-
-
-
 </div>
 @endsection

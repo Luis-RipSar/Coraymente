@@ -3,7 +3,7 @@
     <div class="public-nav-inner">
         {{-- Logo --}}
         <a href="{{ route('inicio') }}" class="public-logo">
-            <img src="{{ asset('imagenes/logo_vector.png') }}" alt="Coraymente">
+            <img src="{{ asset('public/imagenes/logo_vector.png') }}" alt="Coraymente">
         </a>
 
         {{-- Botón hamburguesa (sólo móvil) --}}
