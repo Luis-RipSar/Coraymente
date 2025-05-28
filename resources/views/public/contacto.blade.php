@@ -1,4 +1,4 @@
-{{-- resources/views/public/contacto.blade.php --}}
+{{-- resources/views/contacto.blade.php --}}
 @extends('layouts.public')
 
 @section('content')

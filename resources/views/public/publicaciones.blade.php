@@ -1,4 +1,3 @@
-{{-- resources/views/public/publicaciones.blade.php --}}
 @extends('layouts.public')
 
 @section('content')

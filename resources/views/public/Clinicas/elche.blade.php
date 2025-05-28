@@ -10,20 +10,20 @@
 
         <div class="gallery-group">
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/1.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/3.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/12.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/2.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/18.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/4.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/7.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/9.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/10.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/11.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/13.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/15.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/16.jpg') }}" alt="Imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/elche/17.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/1.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/3.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/12.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/2.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/18.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/4.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/7.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/9.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/10.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/11.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/13.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/15.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/16.jpg') }}" alt="Imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/elche/17.jpg') }}" alt="Imagen"></div>
             </div>
         </div>
     </section>

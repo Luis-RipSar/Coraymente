@@ -1,9 +1,7 @@
 @extends('layouts.public')
 
 @section('content')
-{{-- Contenedor principal --}}
 <div class="publicacion-container">
-    {{-- Hero con imagen de fondo y título sobrepuesto --}}
     @if($publication->image_url)
     <div class="publicacion-hero" style="background-image: url('{{ asset($publication->image_url) }}')">
         <h1 class="publicacion-hero-title">{{ $publication->titulo }}</h1>
@@ -12,7 +10,6 @@
     <h1 class="text-3xl font-bold text-gray-800 mb-6 publicacion-titulo">{{ $publication->titulo }}</h1>
     @endif
 
-    {{-- Meta datos --}}
     <div class="publicacion-meta">
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -31,12 +28,10 @@
         </span>
     </div>
 
-    {{-- Cuerpo del artículo --}}
     <div class="publicacion-body">
         {!! nl2br(e($publication->body)) !!}
     </div>
 
-    {{-- Llamada a la acción --}}
     <div class="publicacion-cta">
         <a href="{{ route('contacto') }}">Solicita tu cita</a>
     </div>

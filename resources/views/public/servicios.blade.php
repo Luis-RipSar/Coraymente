@@ -64,14 +64,14 @@
     <div class="servicios-content">
         {{-- Psicología general --}}
         <section x-show="active==='psicologia'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('public/imagenes/servicios/psicologia.jpg') }}" alt="Psicología">
+            <img src="{{ asset('imagenes/servicios/psicologia.jpg') }}" alt="Psicología">
             <h2>Psicología</h2>
             <p>Ofrecemos atención psicológica personalizada para todas las edades…</p>
         </section>
 
         <!-- Terapia Ocupacional -->
         <section x-show="active==='terapia_ocupacional'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('public/imagenes/servicios/to.jpg') }}" alt="TO General">
+            <img src="{{ asset('imagenes/servicios/to.jpg') }}" alt="TO General">
             <h2>Terapia Ocupacional</h2>
             {{-- EXPLICACION --}}
 
@@ -189,28 +189,28 @@
 
         <!-- Logopedia -->
         <section x-show="active==='logopedia'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('public/imagenes/servicios/logopedia.jpg') }}" alt="Logopedia">
+            <img src="{{ asset('imagenes/servicios/logopedia.jpg') }}" alt="Logopedia">
             <h2>Logopedia</h2>
             <p>Tratamos trastornos del habla y lenguaje…</p>
         </section>
 
         <!-- Neurorehabilitación -->
         <section x-show="active==='neurorehabilitacion'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('public/imagenes/servicios/neuro.jpg') }}" alt="Neurorehabilitación">
+            <img src="{{ asset('imagenes/servicios/neuro.jpg') }}" alt="Neurorehabilitación">
             <h2>Neurorehabilitación</h2>
             <p>Evaluamos y rehabilitamos funciones cognitivas…</p>
         </section>
 
         <!-- Terapia Asistida con Animales -->
         <section x-show="active==='taa'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('public/imagenes/servicios/taa.jpg') }}" alt="Terapia con Animales">
+            <img src="{{ asset('imagenes/servicios/taa.jpg') }}" alt="Terapia con Animales">
             <h2>Terapia con Animales</h2>
             <p>Intervenciones con animales entrenados…</p>
         </section>
 
         <!-- Apoyo educación -->
         <section x-show="active==='ae'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('public/imagenes/servicios/ae.jpg') }}" alt="Apoyo Educación">
+            <img src="{{ asset('imagenes/servicios/ae.jpg') }}" alt="Apoyo Educación">
             <h2>Apoyo Educación</h2>
             <p>Psicopedagogía</p>
         </section>

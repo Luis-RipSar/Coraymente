@@ -10,8 +10,8 @@
 
         <div class="gallery-group">
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/almoradi/1.jpg') }}" alt="imagen"></div>
-                <div class="gallery-item"><img src="{{ asset('public/imagenes/almoradi/2.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/1.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/2.jpg') }}" alt="imagen"></div>
             </div>
         </div>
 
