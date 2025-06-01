@@ -557,9 +557,8 @@
             <h2>Neurorrehabilitación</h2>
             <p>
                 La <span class="strong">Neurorrehabilitación</span> es un proceso de tratamiento con enfoque
-                multidisciplinario que
-                involucra a profesionales de la neuropsicología, terapia ocupacional y logopedia en atender y abordar a
-                aquellas personas que presentan una afectación en sus funciones neurológicas.
+                multidisciplinario que involucra a profesionales de la neuropsicología, terapia ocupacional y logopedia
+                en atender y abordar a aquellas personas que presentan una afectación en sus funciones neurológicas.
             </p>
 
             <br>
@@ -588,7 +587,7 @@
             <hr class="separador-servicio">
             <br>
             <h3>Beneficios</h3>
-            <ul>
+            <ul class="beneficios-lista">
                 <li>
                     Recuperación, compensación o enlentecimiento de aquellas funciones cognitivas y motoras afectadas
                 </li>
@@ -602,15 +601,33 @@
             <hr class="separador-servicio">
             <br>
             <h3>Áreas de Intervención</h3>
-            <ul>
+            <ul class="areas-lista">
                 <li>
-                    Trastornos del neurodesarrollo: TEA, TDAH, Altas Capacidades, Trastornos del aprendizaje, Retraso
-                    madurativo, Diversidad Funcional, Trastornos del lenguaje y alteraciones genéticas.
-                </li>
-                <li>Daño cerebral adquirido: Ictus, traumatismos, tumores…</li>
-                <li>
-                    Enfermedades neurodegenerativas: Deterioro cognitivo, Demencias, Esclerosis Lateral Amiotrófica
-                    (ELA), Enfermedad de Parkinson, Esclerosis Múltiple…
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-title">Personas</span>
+                            </div>
+                            <div class="card-back">
+                                <ul>
+                                    <li>
+                                        <span class="strong">Trastornos del neurodesarrollo</span>: TEA, TDAH, Altas
+                                        Capacidades, Trastornos del aprendizaje, Retraso madurativo, Diversidad
+                                        Funcional, Trastornos del lenguaje y alteraciones genéticas
+                                    </li>
+                                    <li>
+                                        <span class="strong">Daño cerebral adquirido</span>: Ictus, traumatismos,
+                                        tumores…
+                                    </li>
+                                    <li>
+                                        <span class="strong">Enfermedades neurodegenerativas</span>: Deterioro
+                                        cognitivo, Demencias, Esclerosis Lateral Amiotrófica (ELA), Enfermedad de
+                                        Parkinson, Esclerosis Múltiple…
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -736,13 +753,14 @@
             <br>
             <hr class="separador-servicio">
             <br>
-            <h3>PROGRAMA DE TERAPIA ASISTIDA CON ANIMALES</h3>
+            <h2>PROGRAMA DE TERAPIA ASISTIDA CON ANIMALES</h2>
             <p>
-                Programa de seis talleres diferentes destinado a ofrecer un servicio de asistencia terapéutica grupal e
+                Programa de <span class="strong">seis talleres diferentes</span> destinado a ofrecer un servicio de
+                asistencia terapéutica grupal e
                 integral a través de la terapia asistida con animales. Todos los talleres están diseñados y dirigidos
                 por profesionales de la salud.
             </p>
-            <ul>
+            <ul class="beneficios-lista">
                 <li>Sesiones semanales, quincenales o mensuales</li>
                 <li>Sesiones de 1 hora</li>
                 <li>Entre 3 y 10 participantes</li>
@@ -750,46 +768,78 @@
                 <li>Elección libre de talles. Con posibilidad de variar temática</li>
             </ul>
 
-            <h4>Talleres</h4>
+            <br>
+            <hr class="separador-servicio">
+            <br>
+            <h3>Talleres</h3>
             <ul>
-                <li>Taller de estimulación cognitiva</li>
-                <li>Taller de motricidad fina y gruesa</li>
-                <li>Taller de inteligencia emocional</li>
-                <li>Taller de actividades de la vida diaria</li>
-                <li>Taller de integración sensorial</li>
-                <li>Taller de autocuidado</li>
+                <li><span style="font-size:1.3em; margin-right:0.5em;">🧠</span>Taller de estimulación cognitiva</li>
+                <li><span style="font-size:1.3em; margin-right:0.5em;">🤲</span>Taller de motricidad fina y gruesa</li>
+                <li><span style="font-size:1.3em; margin-right:0.5em;">💖</span>Taller de inteligencia emocional</li>
+                <li><span style="font-size:1.3em; margin-right:0.5em;">🏠</span>Taller de actividades de la vida diaria
+                </li>
+                <li><span style="font-size:1.3em; margin-right:0.5em;">🧩</span>Taller de integración sensorial</li>
+                <li><span style="font-size:1.3em; margin-right:0.5em;">🛁</span>Taller de autocuidado</li>
             </ul>
 
-            <h4>A quién va dirigido</h4>
+            <br>
+            <hr class="separador-servicio">
+            <br>
+            <h3>A quién va dirigido</h3>
 
-            <ul>
+            <ul class="areas-lista">
                 <li>
-                    <h5>CENTROS EDUCATIVOS</h5>
-                    <p>
-                        Alumnos con necesidades educativas especiales, aulas ordinarias con alumnado con problemas de
-                        conducta, ansiedad, autolesiones, desmotivación, bajo estado de ánimo, bullying, problemas de
-                        comunicación, falta de habilidades sociales, problemas de aprendizaje, dificultades de
-                        adaptación y trastornos del neurodesarrollo.
-                    </p>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-title">CENTROS EDUCATIVOS</span>
+                            </div>
+                            <div class="card-back">
+                                <p style="padding: 1rem; font-size: 1rem;">
+                                    Alumnos con necesidades educativas especiales, aulas ordinarias con alumnado con
+                                    problemas de conducta, ansiedad, autolesiones, desmotivación, bajo estado de ánimo,
+                                    bullying, problemas de comunicación, falta de habilidades sociales, problemas de
+                                    aprendizaje, dificultades de adaptación y trastornos del neurodesarrollo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <h5>RESIDENCIAS DE ANCIANOS</h5>
-                    <p>
-                        Usuarios con deterioro cognitivo leve o moderado, demencia, trastornos del movimiento, usuarios
-                        con estado bajo estado de ánimo y con alteración en actividades de la vida diaria básicas e
-                        instrumentales.
-                    </p>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-title">RESIDENCIAS DE ANCIANOS</span>
+                            </div>
+                            <div class="card-back">
+                                <p style="padding: 1rem; font-size: 1rem;">
+                                    Usuarios con deterioro cognitivo leve o moderado, demencia, trastornos del
+                                    movimiento, usuarios con estado bajo estado de ánimo y con alteración en actividades
+                                    de la vida diaria básicas e instrumentales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <h5>ASOCIACIONES Y FUNDACIONES</h5>
-                    <p>
-                        Usuarios con diversidad funcional, trastornos psiquiátricos, alteración en las actividades de la
-                        vida diaria básicas e instrumentales, dificultades psicomotrices, usuarios con problemas de
-                        conducta, con riesgo de exclusión social y aislamiento, usuarios con alteración sensorial,
-                        usuarios con alteración en el estado de ánimo, problemas de autocontrol, problemas en la
-                        funcionalidad diaria, alteración cognitiva, daño cerebral, trastornos del neurodesarrollo y
-                        enfermedades neurodegenerativas.
-                    </p>
+                    <div class="card-flip">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-title">ASOCIACIONES Y FUNDACIONES</span>
+                            </div>
+                            <div class="card-back">
+                                <p style="padding: 1rem; font-size: 1rem;">
+                                    Usuarios con diversidad funcional, trastornos psiquiátricos, alteración en las
+                                    actividades de la vida diaria básicas e instrumentales, dificultades psicomotrices,
+                                    usuarios con problemas de conducta, con riesgo de exclusión social y aislamiento,
+                                    usuarios con alteración sensorial, usuarios con alteración en el estado de ánimo,
+                                    problemas de autocontrol, problemas en la funcionalidad diaria, alteración
+                                    cognitiva, daño cerebral, trastornos del neurodesarrollo y enfermedades
+                                    neurodegenerativas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
