@@ -27,7 +27,7 @@ class PublicationsSeeder extends Seeder
                                 Por eso, en terapia ocupacional trabajamos ejercicios específicos que estimulan estas habilidades, favoreciendo la independencia en las actividades diarias. ¡Pequeños avances hacen grandes diferencias!
                                 <br>
                                 ✨ ¿Tu peque tiene dificultades con estas tareas? ',
-                'image_url'   => 'imagenes/publicacion1.jpg',
+                'image_url'   => 'imagenes/publicaciones/publicacion1.jpg',
                 'published_at'=> Carbon::now()->subDays(10),
             ],
             [
@@ -45,7 +45,7 @@ class PublicationsSeeder extends Seeder
                                 ✔️ Rodearnos de vínculos sanos y tener una red de apoyo sólida con los cuales podamos ser y sentir sin miedo al juicio, favorece el desarrollo de habilidades de interacción con nuestro entorno así como tener fuentes de corregulación, comunicación y cuidado.
                                 <br>
                                 Desde la psicología trabajamos en poder poner nombre a lo que nos sucede, desarrollando estrategias de gestión emocional y afrontamiento que permiten mejorar la relación con uno mismo y con su entorno.',
-                'image_url'   => 'imagenes/publicacion2.jpg',
+                'image_url'   => 'imagenes/publicaciones/publicacion2.jpg',
                 'published_at'=> Carbon::now()->subDays(3),
             ],
             [
@@ -66,7 +66,7 @@ class PublicationsSeeder extends Seeder
                                 Desde la terapia asistida con animales, trabajamos en desarrollar estrategias de consciencia en el momento presente y conexión con uno mismo y con nuestro entorno. 
                                 <br>
                                 ¿Te animas a probarlo? ',
-                'image_url'   => 'imagenes/publicacion3.jpg',
+                'image_url'   => 'imagenes/publicaciones/publicacion3.jpg',
                 'published_at'=> Carbon::now()->subDays(1),
             ],
             [
@@ -81,7 +81,7 @@ class PublicationsSeeder extends Seeder
                                     Desde terapia ocupacional, trabajamos sobre ello y logramos espaciar los episodios de migraña y reducir su intensidad.👏🏼
                                     <br>
                                     Cada caso es único, y por eso, escuchamos, evaluamos y acompañamos desde el origen. Porque cuando entendemos la raíz, la intervención tiene verdadero sentido ',
-                'image_url'   => 'imagenes/publicacion4.jpg',
+                'image_url'   => 'imagenes/publicaciones/publicacion4.jpg',
                 'published_at'=> Carbon::now()->subDays(1),
             ],
             [
@@ -94,7 +94,7 @@ class PublicationsSeeder extends Seeder
                                     Por ello, es una consecuencia, no la base del problema, siendo necesaria una correcta atención e intervención psicológica para cortar de raíz aquellos patrones que favorecen estas sensaciones fisiológicas tan desagradables.
                                     <br>
                                     Cada caso es único, y por eso, escuchamos, evaluamos y acompañamos desde el origen. Porque cuando entendemos la raíz, la intervención tiene verdadero sentido ',
-                'image_url'   => 'imagenes/publicacion5.jpg',
+                'image_url'   => 'imagenes/publicaciones/publicacion5.jpg',
                 'published_at'=> Carbon::now()->subDays(1),
             ],
         ];
