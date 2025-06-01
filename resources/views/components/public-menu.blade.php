@@ -19,8 +19,8 @@
         </button>
 
         {{-- Enlaces de navegación (desktop) --}}
-        <div class="public-links hidden md:flex">
-            <div class="group">
+        <div class="public-links hidden md:flex" :class="{'flex': open, 'hidden': !open, 'md:flex': true}">
+            <div class=" group">
                 <a href="#" class="nav-link">Clínicas</a>
                 <ul class="dropdown">
                     <li>

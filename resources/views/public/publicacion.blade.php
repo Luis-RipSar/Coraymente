@@ -16,7 +16,7 @@
                 stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M5 11h14M5 19h14M5 15h14" />
             </svg>
-            {{ $publication->published_at->format('d M, Y') }}
+            {{ $publication->published_at->translatedFormat('d M, Y') }}
         </span>
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -29,7 +29,7 @@
     </div>
 
     <div class="publicacion-body">
-        {!! nl2br(e($publication->body)) !!}
+        {!! $publication->body !!}
     </div>
 
     <div class="publicacion-cta">

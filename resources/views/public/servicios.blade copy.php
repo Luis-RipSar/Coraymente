@@ -1,5 +1,99 @@
 @extends('layouts.public')
 
+
+<!-- /* Menú lateral */
+    .servicios-menu {
+        background: #F9FAFB;
+        border: 1px solid #E5E7EB;
+        border-radius: .5rem;
+        position: sticky;
+        top: 14rem;
+        align-self: start;
+    }
+
+    .servicios-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .servicios-menu .servicio-item {
+        border-bottom: 1px solid #E5E7EB;
+    }
+
+    .servicios-menu .servicio-item:hover {
+        background: color.adjust($color2, $lightness: 10%);
+    }
+
+    .servicios-menu .servicio-item:last-child {
+        border-bottom: none;
+    }
+
+    .servicios-menu summary.menu-item {
+        list-style: none;
+        cursor: pointer;
+        padding: .75rem 1rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background .2s;
+    }
+
+    .servicios-menu .servicio-item[open]>summary.menu-item {
+        background: $color2;
+        ;
+        color: $blanco;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .servicios-menu summary.menu-item .chevron {
+        transition: transform .3s;
+    }
+
+    .servicios-menu .servicio-item[open]>summary.menu-item .chevron {
+        transform: rotate(180deg);
+    }
+
+    /* Submenú oculto por defecto */
+    .servicios-menu .submenu {
+        display: none;
+
+    }
+
+    /* Mostrar cuando el <details> esté abierto */
+    .servicios-menu .servicio-item[open]>.submenu {
+        display: block;
+    }
+
+    /* Enlaces de submenú */
+    .servicios-menu .submenu-link {
+        width: 100%;
+        background: #F9FAFB;
+        padding: .5rem 2rem;
+        font-size: .875rem;
+        color: $colorTexto;
+        text-decoration: none;
+        transition: background .5s;
+        text-align: left;
+    }
+
+    .servicios-menu .submenu-link:hover {
+        background: color.adjust($color1, $lightness: 10%);
+    }
+
+    /* Enlaces de submenú activos */
+    .servicios-menu .submenu-link.active {
+        background: $color1;
+        color: $blanco;
+    }
+
+    .servicios-menu .submenu-link.active:hover {
+        background: color.adjust($color1, $lightness: -10%);
+    } -->
+
+
 @section('content')
 <div class="servicios-container" x-data="{ active: 'psicologia' }">
     {{-- Menú lateral --}}

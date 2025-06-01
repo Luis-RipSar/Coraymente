@@ -25,10 +25,10 @@
             <tr>
                 <td>{{ $pub->titulo }}</td>
                 <td>{{ $pub->resumen }}</td>
-                <td>{{ $pub->body }}</td>
+                <td width="500">{{ $pub->body }}</td>
                 <td>
                     @if($pub->image_url)
-                    <img src="{{ asset($pub->image_url) }}" alt="{{ $pub->titulo }}" width="500">
+                    <img src="{{ asset($pub->image_url) }}" alt="{{ $pub->titulo }}" width="120">
                     @else
                     —
                     @endif

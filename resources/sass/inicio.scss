@@ -134,7 +134,7 @@
         font-weight: bold;
         padding: 1rem;
         font-size: 4rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     section {
@@ -255,7 +255,10 @@
     }
 
     &__sobre {
+        margin: 0 auto;
+        width: 98%;
         background-color: $color1;
+        clip-path: xywh(0 0 100% 100% round 10% 0);
 
         .sobre-list {
             display: grid;
@@ -303,22 +306,34 @@
         .equipo-grid {
             display: grid;
             gap: 4rem;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Ajuste automático
+            grid-template-columns: repeat(3, 1fr);
             width: 100%;
-            max-width: 1000px; // Opcional: limita el ancho máximo
-            margin: 0 auto; // Centrado
-            padding: 0 1rem; // Padding para evitar tocar bordes
-            box-sizing: border-box; // Fundamental
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
             justify-content: center;
 
-            @media (max-width: 511px) {
-                grid-template-columns: 1fr; // Mobile: 1 columna (opcional 2 si prefieres)
+            // Primera fila: solo 2 elementos, centrados
+            .equipo-card:nth-child(1) {
+                grid-column: 1 / 2;
+            }
 
-                .equipo-card:nth-last-child(2):nth-child(odd),
-                .equipo-card:last-child:nth-child(even) {
-                    grid-column: span 2; // Ocupan 2 columnas
-                    justify-self: center; // Se centran en ese espacio
-                    width: calc(66.66% - 0.75rem); // Ajuste preciso (2 columnas - gap/2)
+            .equipo-card:nth-child(2) {
+                grid-column: 3 / 4;
+            }
+
+            // A partir del tercero, normal
+            .equipo-card:nth-child(n+3) {
+                grid-column: auto;
+            }
+
+            @media (max-width: 511px) {
+                grid-template-columns: 1fr;
+
+                .equipo-card {
+                    grid-column: auto !important;
+                    width: 100% !important;
                 }
             }
 
@@ -491,14 +506,16 @@
 
         .colab-slider {
             display: flex;
-            gap: 2rem;
-            animation: slide 15s linear infinite;
+            gap: .2rem;
+            animation: slide 10s linear infinite;
+            width: max-content;
 
             .colab-item {
+                margin: 0 7rem;
                 flex: 0 0 auto;
 
                 img {
-                    width: 120px;
+                    width: 175px;
                 }
             }
         }

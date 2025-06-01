@@ -184,13 +184,6 @@
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/kala.jpg" alt="Kala">
-                    </div>
-                    <h3>Kala</h3>
-                </div>
-                <div class="equipo-card">
-                    <div class="avatar-wrapper">
-                        <div class="bg-circle"></div>
                         <img class="avatar" src="imagenes/equipo/jefas.jpg" alt="Minerva Linares Martín-Calpena">
                     </div>
                     <h3>Minerva Linares Martín-Calpena</h3>
@@ -205,6 +198,13 @@
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
+                        <img class="avatar" src="imagenes/equipo/kala.jpg" alt="Kala">
+                    </div>
+                    <h3>Kala</h3>
+                </div>
+                <div class="equipo-card">
+                    <div class="avatar-wrapper">
+                        <div class="bg-circle"></div>
                         <img class="avatar" src="imagenes/equipo/clara.jpg" alt="Clara San Nicolás">
                     </div>
                     <h3>Clara San Nicolás</h3>
@@ -212,9 +212,9 @@
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/noemi.jpg" alt="Noemi Martínez">
+                        <img class="avatar" src="imagenes/equipo/elena.jpg" alt="Elena Cuerda Navarro">
                     </div>
-                    <h3>Noemi Martínez</h3>
+                    <h3>Elena Cuerda Navarro</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
@@ -226,9 +226,9 @@
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/elena.jpg" alt="Elena Cuerda Navarro">
+                        <img class="avatar" src="imagenes/equipo/noemi.jpg" alt="Noemi Martínez">
                     </div>
-                    <h3>Elena Cuerda Navarro</h3>
+                    <h3>Noemi Martínez</h3>
                 </div>
 
             </div>
@@ -242,8 +242,15 @@
     <section class="inicio__colaboraciones">
         <h2>Colaboraciones</h2>
         <div class="colab-slider">
-            @foreach(['colab1.png','colab2.png','colab3.png'] as $logo)
-            <div class="colab-item"><img src="{{ asset(" imagenes/colaboradores/$logo") }}" alt=""></div>
+            @foreach(['ceu.jpg','domopersonal.jpg','helike.jpg', 'mentesdivergentes.jpg', 'umh.jpg'] as $logo)
+            <div class="colab-item">
+                <img src="imagenes/colaboradores/<?= $logo ?>" alt="Colaboradores">
+            </div>
+            @endforeach
+            @foreach(['ceu.jpg','domopersonal.jpg','helike.jpg', 'mentesdivergentes.jpg', 'umh.jpg'] as $logo)
+            <div class="colab-item">
+                <img src="imagenes/colaboradores/<?= $logo ?>" alt="Colaboradores">
+            </div>
             @endforeach
         </div>
     </section>

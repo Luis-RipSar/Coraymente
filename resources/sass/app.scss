@@ -11,6 +11,11 @@
 @use './admin-publicaciones';
 @use './inicio';
 
+html {
+    font-family: "Questrial", sans-serif !important;
+    font-size: 18px;
+}
+
 [x-cloak] {
     display: none !important;
 }
