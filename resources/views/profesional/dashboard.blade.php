@@ -18,18 +18,18 @@
                             Nombre</th>
                         <th
                             class="px-5 py-3 border-b-2 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                            Edad</th>
+                            Teléfono</th>
                         <th
                             class="px-5 py-3 border-b-2 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
-                            Fecha Registro</th>
+                            Ciudad</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse($pacientes as $paciente)
                     <tr class="hover:bg-gray-50">
                         <td class="px-5 py-5 border-b text-sm">{{ $paciente->nombre }}</td>
-                        <td class="px-5 py-5 border-b text-sm">{{ $paciente->edad }}</td>
-                        <td class="px-5 py-5 border-b text-sm">{{ $paciente->created_at->format('d/m/Y') }}</td>
+                        <td class="px-5 py-5 border-b text-sm">{{ $paciente->telefono }}</td>
+                        <td class="px-5 py-5 border-b text-sm">{{ $paciente->ciudad }}</td>
                     </tr>
                     @empty
                     <tr>

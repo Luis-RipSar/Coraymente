@@ -553,7 +553,7 @@
 
         <!-- Neurorehabilitación -->
         <section x-show="active==='neurorrehabilitacion'" x-cloak class="servicio-seccion">
-            <img src="{{ asset('imagenes/servicios/neuro.jpg') }}" alt="Neurorehabilitación">
+            <img src="{{ asset('imagenes/servicios/neurorehabilitacion.jpg') }}" alt="Neurorehabilitación">
             <h2>Neurorrehabilitación</h2>
             <p>
                 La <span class="strong">Neurorrehabilitación</span> es un proceso de tratamiento con enfoque

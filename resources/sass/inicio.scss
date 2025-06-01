@@ -154,15 +154,16 @@
         .cita-btn {
             display: inline-block;
             font-size: xx-large;
-            background: #2563EB;
+            background: $color1;
             color: $blanco;
             padding: 1rem 1.5rem;
             border-radius: .5rem;
-            transition: background .2s;
+            transition: background .2s ease, box-shadow .2s ease;
             margin-top: 1.5rem;
 
             &:hover {
-                background: #1E40AF;
+                background: color.adjust-color($color: $color1, $lightness: -10%);
+                box-shadow: 0 0 10px rgba(0, 0, 0, .5);
             }
         }
     }

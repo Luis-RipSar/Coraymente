@@ -24,7 +24,7 @@
             con animales, con amplia experiencia y formación en infancia y adolescencia, adultez y vejez, siendo
             expertas en neurodivergencia.
         </p>
-        <a href="" class="btn cita-btn">Pide tu cita</a>
+        <a href="{{ route('contacto') }}" class="btn cita-btn">Pide tu cita</a>
     </section>
 
     {{-- 2. Nuestros Servicios --}}
@@ -97,7 +97,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="fondo-capa"></div>
-                        <img src="imagenes/servicios/neuro.jpg" alt="Neurorrehabilitacion">
+                        <img src="imagenes/servicios/neurorehabilitacion.jpg" alt="Neurorrehabilitacion">
                         <span class="card-title">Neurorrehabilitación</span>
                     </div>
                     <div class="card-back">
