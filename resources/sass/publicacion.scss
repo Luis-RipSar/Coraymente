@@ -106,6 +106,28 @@
 
     .publicacion-cta a:hover {
         background-color: #93BFCF;
-        transform: translateY(-2px);
+        transform: translateY(-4px);
+    }
+
+    .publicacion-volver {
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .publicacion-volver a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 4rem;
+        border-radius: 0.375rem;
+        background-color: $color1;
+        color: $colorSubtitulo;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.5s ease, background-color 0.5s ease;
+    }
+
+    .publicacion-volver a:hover {
+        background-color: $color2;
+        color: $colorSubtitulo;
     }
 }

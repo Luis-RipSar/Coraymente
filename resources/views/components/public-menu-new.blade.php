@@ -112,10 +112,32 @@
                     <li><a href="{{ route('clinicas.elche') }}" class="dropdown-link">Elche</a></li>
                 </ul>
             </div>
-            <a href="{{ route('equipo') }}">Equipo</a>
-            <a href="{{ route('servicios') }}">Servicios</a>
-            <a href="{{ route('publicaciones.index') }}">Publicaciones</a>
-            <a href="{{ route('contacto') }}">Contacto</a>
+            <a href="{{ route('equipo') }}" class="nav-link">Equipo</a>
+            <a href="{{ route('servicios') }}" class="nav-link">Servicios</a>
+            <a href="{{ route('publicaciones.index') }}" class="nav-link">Publicaciones</a>
+            <a href="{{ route('contacto') }}" class="nav-link">Contacto</a>
+            @guest
+            <a href="{{ route('login') }}" class="public-login-btn">Inicio Sesión</a>
+            @else
+            <div class="user-menu">
+                <button class="user-button" @click="userOpen = !userOpen">
+                    {{ auth()->user()->nombre }}
+                    <i class="bi bi-chevron-down" :class="{ 'rotate-180': userOpen }"></i>
+                </button>
+                <div class="user-dropdown" x-show="userOpen">
+                    @if (auth()->user()->role_id == '1')
+                    <a href="{{ route('admin.dashboard') }}" class="dropdown-link">Panel de Control</a>
+                    @endif
+                    @if (auth()->user()->role_id == '2')
+                    <a href="{{ route('profesional.dashboard') }}" class="dropdown-link">Panel de Control</a>
+                    @endif
+                    <form method="POST" action="{{ route('logout') }}" class="dropdown-form">
+                        @csrf
+                        <button type="submit" class="dropdown-link">Cerrar sesión</button>
+                    </form>
+                </div>
+            </div>
+            @endguest
             @guest
             <a href="{{ route('login') }}" class="public-login-btn">Inicio Sesión</a>
             @else
@@ -147,6 +169,10 @@
                 <li><a href="{{ route('clinicas.elche') }}" class="dropdown-link">Elche</a></li>
             </ul>
         </div>
+        <a href="{{ route('equipo') }}" class="nav-link">Equipo</a>
+        <a href="{{ route('servicios') }}" class="nav-link">Servicios</a>
+        <a href="{{ route('publicaciones.index') }}" class="nav-link">Publicaciones</a>
+        <a href="{{ route('contacto') }}" class="nav-link">Contacto</a>
     </div>
     </div>
 </nav>

@@ -1,0 +1,52 @@
+@use './variables' as *;
+@use "sass:color";
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: $color1;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+
+    .cookie-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        @media (max-width: 640px) {
+            padding: 0.75rem;
+            text-align: center;
+        }
+    }
+
+    .cookie-text {
+        color: $negro;
+        margin-bottom: 1rem;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            margin-right: 1rem;
+        }
+
+        a {
+            color: $color2;
+            text-decoration: underline;
+
+            &:hover {
+                color: color.adjust($color2, $lightness: -10%);
+            }
+        }
+    }
+
+    .cookie-buttons {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+        }
+    }
+}

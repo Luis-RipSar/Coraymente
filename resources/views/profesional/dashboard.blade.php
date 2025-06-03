@@ -67,8 +67,12 @@
                     @forelse($citas as $cita)
                     <tr class="hover:bg-gray-50">
                         <td class="px-5 py-5 border-b text-sm">{{ $cita->usuario->nombre }}</td>
-                        <td class="px-5 py-5 border-b text-sm">{{ \Carbon\Carbon::parse($cita->fecha)->format('d/m/Y
-                            H:i') }}
+                        <td class="px-5 py-5 border-b text-sm">
+                            @if($cita->fecha instanceof \DateTime || $cita->fecha instanceof \Carbon\Carbon)
+                            {{ $cita->fecha->format('d/m/Y H:i') }}
+                            @else
+                            {{ $cita->fecha }}
+                            @endif
                         </td>
 
                         {{-- Celda con formulario inline para cambiar sólo el estado --}}
@@ -88,13 +92,8 @@
                                 </select>
                         </td>
                         <td class="px-5 py-5 border-b text-sm">
+                            {{-- Solo enviamos el ID y el estado --}}
                             <input type="hidden" name="id" value="{{ $cita->id }}" required>
-                            <input type="hidden" name="id_usuario" value="{{ $cita->usuario->id }}" required>
-                            <input type="hidden" name="id_profesional" value="{{ $cita->profesional->id }}">
-                            <input type="hidden" name="sede" value="{{ $cita->sede  }}" required>
-                            <input type="hidden" name="sala" value="{{ $cita->sala  }}" required>
-                            <input type="hidden" name="motivo" value="{{ $cita->motivo  }}" required>
-                            <input type="hidden" name="fecha" value="{{ $cita->fecha  }}" required>
                             <button type="submit"
                                 class="inline-flex px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300">
                                 Guardar

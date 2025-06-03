@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::get('/', fn() => view('public.inicio'))->name('inicio');
+Route::view('/politica-cookies', 'public.politica-cookies')->name('politica-cookies');
 
 Route::view('/clinicas/almoradi', 'public.clinicas.almoradi')
      ->name('clinicas.almoradi');

@@ -36,4 +36,7 @@
         <a href="{{ route('contacto') }}">Solicita tu cita</a>
     </div>
 
+    <div class="publicacion-volver">
+        <a href="{{ route('publicaciones.index') }}" class="btn cita-btn">Volver a publicaciones</a>
+    </div>
     @endsection

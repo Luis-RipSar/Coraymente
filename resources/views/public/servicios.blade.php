@@ -1,71 +1,78 @@
 @extends('layouts.public')
 
 @section('content')
-<div class="servicios-container" x-data="{ active: 'psicologia' }">
+<div class="servicios-container" x-data="{ 
+        active: 'psicologia',
+        menuOpen: false
+    }">
     {{-- Menú lateral --}}
-    <nav class="servicios-menu">
-        <ul>
-            {{-- Psicología --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('psicologia')">
-                    <summary class="menu-item" @click.prevent="active = 'psicologia'">
-                        Psicología
-                    </summary>
-                </details>
-            </li>
-            {{-- Neuropsicología --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('neuropsicologia')">
-                    <summary class="menu-item" @click.prevent="active = 'neuropsicologia'">
-                        Neuropsicología
-                    </summary>
-                </details>
-            </li>
-            {{-- Terapia Ocupacional --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('terapia_ocupacional')">
-                    <summary class="menu-item" @click.prevent="active = 'terapia_ocupacional'">
-                        Terapia Ocupacional
-                    </summary>
-                </details>
-            </li>
+    <nav class="servicios-menu" :class="{ 'open': menuOpen }">
+        <div class="menu-header" @click.stop="menuOpen = !menuOpen">
+        </div>
+        <div class="menu-content">
+            <ul>
+                {{-- Psicología --}}
+                <li>
+                    <details class="servicio-item" :open="active === 'psicologia'">
+                        <summary class="menu-item" @click.prevent="active = 'psicologia'; menuOpen = false">
+                            Psicología
+                        </summary>
+                    </details>
+                </li>
+                {{-- Neuropsicología --}}
+                <li>
+                    <details class="servicio-item" :open="active.startsWith('neuropsicologia')">
+                        <summary class="menu-item" @click.prevent="active = 'neuropsicologia'">
+                            Neuropsicología
+                        </summary>
+                    </details>
+                </li>
+                {{-- Terapia Ocupacional --}}
+                <li>
+                    <details class="servicio-item" :open="active.startsWith('terapia_ocupacional')">
+                        <summary class="menu-item" @click.prevent="active = 'terapia_ocupacional'">
+                            Terapia Ocupacional
+                        </summary>
+                    </details>
+                </li>
 
-            {{-- Logopedia --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('logopedia')">
-                    <summary class="menu-item" @click.prevent="active = 'logopedia'">
-                        Logopedia
-                    </summary>
-                </details>
-            </li>
+                {{-- Logopedia --}}
+                <li>
+                    <details class="servicio-item" :open="active.startsWith('logopedia')">
+                        <summary class="menu-item" @click.prevent="active = 'logopedia'">
+                            Logopedia
+                        </summary>
+                    </details>
+                </li>
 
-            {{-- Neurorehabilitación --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('neurorrehabilitacion')">
-                    <summary class="menu-item" @click.prevent="active = 'neurorrehabilitacion'">
-                        Neurorrehabilitación
-                    </summary>
-                </details>
-            </li>
+                {{-- Neurorehabilitación --}}
+                <li>
+                    <details class="servicio-item" :open="active.startsWith('neurorrehabilitacion')">
+                        <summary class="menu-item" @click.prevent="active = 'neurorrehabilitacion'">
+                            Neurorrehabilitación
+                        </summary>
+                    </details>
+                </li>
 
-            {{-- Terapia Asistida con Animales --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('taa')">
-                    <summary class="menu-item" @click.prevent="active = 'taa'">
-                        Terapia con Animales
-                    </summary>
-                </details>
-            </li>
+                {{-- Terapia Asistida con Animales --}}
+                <li>
+                    <details class="servicio-item" :open="active.startsWith('taa')">
+                        <summary class="menu-item" @click.prevent="active = 'taa'">
+                            Terapia con Animales
+                        </summary>
+                    </details>
+                </li>
 
-            {{-- Apoyo Educación --}}
-            <li>
-                <details class="servicio-item" :open="active.startsWith('ae')">
-                    <summary class="menu-item" @click.prevent="active = 'ae'">
-                        Apoyo Educación
-                    </summary>
-                </details>
-            </li>
-        </ul>
+                {{-- Apoyo Educación --}}
+                <li>
+                    <details class="servicio-item" :open="active.startsWith('ae')">
+                        <summary class="menu-item" @click.prevent="active = 'ae'">
+                            Apoyo Educación
+                        </summary>
+                    </details>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     {{-- Contenido dinámico --}}
@@ -126,7 +133,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">INFANTO-JUVENIL</span>
@@ -150,7 +157,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">NEURORREHABILITACIÓN</span>
@@ -172,7 +179,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">ADULTOS Y VEJEZ</span>
@@ -251,7 +258,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">INFANTO-JUVENIL</span>
@@ -272,7 +279,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">NEURORREHABILITACIÓN</span>
@@ -294,7 +301,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">ADULTOS Y VEJEZ</span>
@@ -366,7 +373,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">INFANTIL</span>
@@ -387,7 +394,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">NEURORREHABILITACIÓN</span>
@@ -409,7 +416,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">ADULTOS Y VEJEZ</span>
@@ -478,7 +485,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">INFANTIL</span>
@@ -505,7 +512,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">NEURORREHABILITACIÓN</span>
@@ -527,7 +534,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">ADULTO Y VEJEZ</span>
@@ -603,7 +610,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">Personas</span>
@@ -685,7 +692,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">INFANTO-JUVENIL</span>
@@ -708,7 +715,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">NEURORREHABILITACIÓN</span>
@@ -730,7 +737,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">ADULTOS Y VEJEZ</span>
@@ -789,7 +796,7 @@
 
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">CENTROS EDUCATIVOS</span>
@@ -806,7 +813,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">RESIDENCIAS DE ANCIANOS</span>
@@ -822,7 +829,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">ASOCIACIONES Y FUNDACIONES</span>
@@ -892,7 +899,7 @@
             <h3>Áreas de Intervención</h3>
             <ul class="areas-lista">
                 <li>
-                    <div class="card-flip">
+                    <div class="card-flip" @click="$el.classList.toggle('flipped')">
                         <div class="card-inner">
                             <div class="card-front">
                                 <span class="card-title">INFANTO-JUVENIL</span>

@@ -26,7 +26,8 @@ class CitasSeeder extends Seeder
                 'sede'           => $faker->city,
                 'sala'           => $faker->word,
                 'fecha'          => Carbon::now()
-                                         ->addDays($faker->numberBetween(-5, 10))
+                                         ->addDays($faker->numberBetween(1, 30))
+                                         ->setTime($faker->numberBetween(9, 17), 0, 0)
                                          ->toDateTimeString(),
                 'motivo'         => $faker->sentence(6),
                 'estado'         => $faker->randomElement(EstadoCitaEnum::values()),

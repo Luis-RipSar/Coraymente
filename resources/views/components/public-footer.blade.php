@@ -13,10 +13,12 @@
     </div>
 
     <div class="public-footer-middle">
-        <div class="footer-logo">
-            <img src="{{ asset('imagenes/logo_footer.png') }}" alt="Coraymente">
-        </div>
+
+
         <ul class="footer-info-list">
+            <li class="footer-info-item">
+                <img src="{{ asset('imagenes/logo_footer.png') }}" alt="Coraymente" class="footer-logo">
+            </li>
             <li class="footer-info-item">
                 <svg class="icon">
                     <use xlink:href="#icon-location" />

@@ -6,12 +6,21 @@
     /* Layout principal */
     .servicios-container {
         display: grid;
-        grid-template-columns: 260px 1fr;
+        grid-template-columns: 1fr;
         gap: 2rem;
-        max-width: 70vw;
-        margin: 4rem auto;
-        padding: 2rem 1rem;
+        width: 100%;
+        max-width: 80%;
+        margin: 2rem auto;
+        padding: 1rem;
         align-items: start;
+        position: relative; // Para el menú móvil
+
+        @media (min-width: 1024px) {
+            grid-template-columns: 260px minmax(0, 1fr);
+            width: 90%;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
     }
 
     /* Menú lateral */
@@ -22,6 +31,41 @@
         position: sticky;
         top: 14rem;
         align-self: start;
+
+        @media (max-width: 1023px) {
+            background: $blanco;
+            position: fixed;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 40;
+            transform: translateY(calc(100% - 50px));
+            transition: transform 0.3s ease;
+
+            &.open {
+                transform: translateY(0);
+            }
+
+            .menu-header {
+                content: "Menú de servicios ▼";
+                display: block;
+                text-align: center;
+                padding: .75rem 1rem;
+                font-weight: 600;
+                background: $color2;
+                color: $blanco;
+                border-radius: .5rem .5rem 0 0;
+            }
+
+            &.open .menu-header::before {
+                content: "Menú de servicios ▲";
+            }
+
+            .menu-header::before {
+                content: "Menú de servicios ▼";
+            }
+        }
     }
 
     .servicios-menu ul {
@@ -65,7 +109,14 @@
 
     /* Contenido de la sección */
     .servicios-content {
-        padding: 1.5rem;
+        padding: 2rem;
+        width: 80%;
+        min-width: 0;
+
+        @media (max-width: 1023px) {
+            width: 100%;
+            padding: 0;
+        }
     }
 
 
@@ -83,6 +134,12 @@
 
     .servicio-seccion {
         margin-bottom: 2rem;
+        width: 100%;
+
+        @media (max-width: 1023px) {
+            padding-bottom: 60px;
+
+        }
     }
 
     .servicio-seccion img {
@@ -93,6 +150,12 @@
         margin-bottom: 1rem;
         border-radius: .8rem;
         box-shadow: 0 0 20px rgba(0, 0, 0);
+
+        @media (max-width: 1023px) {
+            margin-top: 2rem;
+            width: 100%;
+            height: 250px;
+        }
     }
 
     .servicio-seccion h2 {
@@ -105,6 +168,10 @@
         margin-top: 5rem;
         border-bottom: 2px solid #ccc;
         padding-bottom: 0.5rem;
+
+        @media (max-width: 1023px) {
+            font-size: 1.1rem;
+        }
     }
 
     .servicio-seccion h3 {
@@ -114,6 +181,10 @@
         font-weight: bolder;
         margin-top: 1.5rem;
         margin-bottom: 1rem;
+
+        @media (max-width: 1023px) {
+            font-size: 1.2rem;
+        }
     }
 
     .servicio-seccion h5 {
@@ -185,16 +256,27 @@
     }
 
     .servicio-seccion .areas-lista {
+        max-width: 100%;
+
         .card-flip {
             perspective: 1000px;
             width: 100%;
-            margin: 4rem auto;
+            max-width: 100%;
+            margin: 2rem auto;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent; // Elimina el highlight al tocar en móviles
 
             .card-inner {
                 position: relative;
-                height: 200px;
+                height: 250px;
                 transform-style: preserve-3d;
-                transition: transform 1s;
+                transition: transform 0.6s;
+                width: 100%;
+                max-width: 100%;
+
+                @media (max-width: 767px) {
+                    height: 300px;
+                }
             }
 
             .card-front,
@@ -211,15 +293,25 @@
 
             .card-front {
                 width: 100%;
+                max-width: 100%;
                 background: color.adjust($color1, $lightness: 10%);
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                box-sizing: border-box;
 
                 .card-title {
                     font-size: 2rem;
                     font-weight: 500;
                     color: $negro;
+
+                    @media (max-width: 1023px) {
+                        font-size: 1.5rem;
+                    }
+
+                    @media (max-width: 767px) {
+                        font-size: 1rem;
+                    }
                 }
             }
 
@@ -229,14 +321,36 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding: 2rem;
+                padding: 1rem;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+
+                @media (max-width: 767px) {
+                    padding: 0.75rem;
+                }
 
                 ul {
                     list-style-type: disc;
+
+                    @media (max-width: 1023px) {
+                        font-size: 0.6rem;
+
+                        li {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
                 }
             }
 
-            &:hover .card-inner {
+            @media (hover: hover) {
+                &:hover .card-inner {
+                    transform: rotateY(180deg);
+                }
+            }
+
+            // Para dispositivos táctiles
+            &.flipped .card-inner {
                 transform: rotateY(180deg);
             }
         }

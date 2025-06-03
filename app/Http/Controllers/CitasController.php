@@ -46,19 +46,30 @@ class CitasController extends Controller
     public function update(Request $request)
     {
         if ($request->user()->role_id == 2) {
+            // Si es un profesional, solo puede actualizar el estado
             $data = $request->validate([
-                'estado'         => 'required|in:pendiente,confirmada,cancelada',
+                'estado' => 'required|in:pendiente,confirmada,cancelada',
+                'id' => 'required|exists:citas,id'
             ]);
-        }else {
+
+            // Actualizar SOLO el estado
+            $cita = CitaModel::find($data['id']);
+            $cita->updateQuietly([
+                'estado' => $data['estado']
+            ]);
+        } 
+        else if ($request->user()->role_id == 1){
+            // Si es un administrador, puede actualizar fecha y estado
             $data = $request->validate([
-                'fecha'     => 'required|date',
-                'estado'         => 'required|in:pendiente,confirmada,cancelada',
+                'fecha'  => 'required|date',
+                'estado' => 'required|in:pendiente,confirmada,cancelada',
             ]);
+
             $data['fecha'] = Carbon::createFromFormat('Y-m-d\TH:i', $data['fecha'])
                                  ->toDateTimeString();
+            
+            CitaModel::where('id', $request->id)->update($data);
         }
-
-        CitaModel::where('id', $request->id)->update($data);
 
         // Si el usuario es un profesional, redirigimos a su dashboard
         if ($request->user()->role_id == 2) {

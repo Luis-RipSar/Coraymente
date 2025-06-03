@@ -17,7 +17,7 @@ return new class extends Migration
             $table->uuid('id_profesional');
             $table->string('sede');
             $table->string('sala');
-            $table->timestamp('fecha');
+            $table->datetime('fecha');
             $table->string('motivo');
             $table->enum('estado', ['pendiente', 'confirmada', 'cancelada'])->default('pendiente');
             $table->foreign('id_usuario')->references('id')->on('users');

@@ -3,49 +3,90 @@
 
 @layer components {
     .publicaciones-container {
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
+        width: 95%;
+        margin: 4rem auto;
+        padding: 1rem;
+
+        @media (min-width: 640px) {
+            width: 90%;
+            margin: 5rem auto;
+        }
+
+        @media (min-width: 1024px) {
+            width: 1120px;
+            max-width: 85%;
+            padding: 2rem 1rem;
+        }
     }
 
     .publicaciones-titulo {
-        font-size: 4rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         text-align: center;
-        color: #1F2937;
+        color: $colorSubtitulo;
+
+        @media (min-width: 640px) {
+            font-size: 3rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
     }
 
     .publicaciones-grid {
         display: grid;
-        gap: 2rem;
+        gap: 2.5rem;
         grid-template-columns: 1fr;
-    }
 
-    @media (min-width: 768px) {
-        .publicaciones-grid {
+        @media (min-width: 640px) {
+            gap: 2.75rem;
+        }
+
+        @media (min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1200px) {
+            gap: 3rem;
         }
     }
 
     .publicacion-card {
-        background: #DDD2C9;
+        background: $color1;
         border-radius: 0.5rem;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba($negro, 0.1);
         display: flex;
         flex-direction: column;
-        transition: transform .2s;
-    }
+        transition: all 0.3s ease;
 
-    .publicacion-card:hover {
-        transform: translateY(-4px);
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba($negro, 0.15);
+        }
     }
 
     .publicacion-img {
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        @media (min-width: 640px) {
+            height: 250px;
+        }
+
+        @media (min-width: 1024px) {
+            height: 300px;
+        }
+
+        .publicacion-card:hover & {
+            transform: scale(1.05);
+        }
     }
 
     .publicacion-body {
@@ -53,31 +94,70 @@
         padding: 1rem;
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 640px) {
+            padding: 1.5rem;
+        }
     }
 
     .publicacion-title {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
-        color: #000000;
+        color: $negro;
+        line-height: 1.3;
+
+        @media (min-width: 640px) {
+            font-size: 1.5rem;
+        }
     }
 
     .publicacion-resumen {
         flex: 1;
-        color: #4B5563;
+        color: $colorTexto;
         margin-bottom: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.6;
+
+        @media (min-width: 640px) {
+            font-size: 1rem;
+        }
     }
 
     .publicacion-readmore {
         align-self: flex-start;
-        color: #000000;
-        font-weight: 900;
+        color: $negro;
+        font-weight: 700;
         text-decoration: none;
-        transition: color .2s, font-size .8s;
-    }
+        font-size: 0.875rem;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: all 0.3s ease;
 
-    .publicacion-readmore:hover {
-        color: #ffffff;
-        font-size: 1.3rem;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color2;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            color: $color2;
+
+            &::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+        @media (min-width: 640px) {
+            font-size: 1rem;
+        }
     }
 }
