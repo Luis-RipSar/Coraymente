@@ -802,7 +802,7 @@
                                 <span class="card-title">CENTROS EDUCATIVOS</span>
                             </div>
                             <div class="card-back">
-                                <p style="padding: 1rem; font-size: 1rem;">
+                                <p>
                                     Alumnos con necesidades educativas especiales, aulas ordinarias con alumnado con
                                     problemas de conducta, ansiedad, autolesiones, desmotivación, bajo estado de ánimo,
                                     bullying, problemas de comunicación, falta de habilidades sociales, problemas de
@@ -819,7 +819,7 @@
                                 <span class="card-title">RESIDENCIAS DE ANCIANOS</span>
                             </div>
                             <div class="card-back">
-                                <p style="padding: 1rem; font-size: 1rem;">
+                                <p>
                                     Usuarios con deterioro cognitivo leve o moderado, demencia, trastornos del
                                     movimiento, usuarios con estado bajo estado de ánimo y con alteración en actividades
                                     de la vida diaria básicas e instrumentales.
@@ -835,7 +835,7 @@
                                 <span class="card-title">ASOCIACIONES Y FUNDACIONES</span>
                             </div>
                             <div class="card-back">
-                                <p style="padding: 1rem; font-size: 1rem;">
+                                <p>
                                     Usuarios con diversidad funcional, trastornos psiquiátricos, alteración en las
                                     actividades de la vida diaria básicas e instrumentales, dificultades psicomotrices,
                                     usuarios con problemas de conducta, con riesgo de exclusión social y aislamiento,

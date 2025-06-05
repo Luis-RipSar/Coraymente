@@ -44,7 +44,6 @@ class ProfesionalController extends Controller
             ->with('status', 'Perfil actualizado correctamente.');
     }
 
-    // procesa el cambio de contraseña
     public function updatePassword(Request $request)
     {
         $user = $request->user();

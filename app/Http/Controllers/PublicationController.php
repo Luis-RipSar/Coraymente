@@ -19,7 +19,6 @@ class PublicationController extends Controller
         return view('public.publicacion', compact('publication'));
     }
 
-    // Nuevo método para admin
     public function adminIndex()
     {
         $publicaciones = Publication::orderByDesc('created_at')->get();
@@ -27,18 +26,11 @@ class PublicationController extends Controller
         return view('admin.publicaciones.index', compact('publicaciones'));
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('admin.publicaciones.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -66,17 +58,11 @@ class PublicationController extends Controller
         ->with('success', 'Publicación creada con éxito');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Publication $publicacion)
     {
         return view('admin.publicaciones.edit', compact('publicacion'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request)
     {
         $data = $request->validate([
@@ -103,9 +89,6 @@ class PublicationController extends Controller
             ->with('success', 'Publicación con título ' . $data['titulo'] . ', actualizada con éxito');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Publication $publicacion)
     {
         if ($publicacion->image_url) {

@@ -13,9 +13,7 @@ class UserModel extends Authenticatable
 {
     use HasFactory, Notifiable;
     
-    // 1) Indico que la PK NO es autoincremental
     public $incrementing = false;
-    // 2) Y que su tipo es string, no int
     protected $keyType = 'string';
     protected $table = 'users';
     protected $fillable = [
@@ -66,10 +64,10 @@ class UserModel extends Authenticatable
     public function pacientes(): BelongsToMany
     {
         return $this->belongsToMany(
-            self::class,       // modelo destino
-            'citas',           // tabla pivote
-            'id_profesional',  // FK en la pivote apuntando a este usuario
-            'id_usuario'      // FK en la pivote apuntando al paciente
-        )->distinct();        // para evitar duplicados si hay varias citas
+            self::class,
+            'citas',
+            'id_profesional',
+            'id_usuario'
+        )->distinct();
     }
 }

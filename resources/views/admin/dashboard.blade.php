@@ -6,7 +6,6 @@
     <h1>Panel de Administración</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        {{-- Ejemplo de tarjeta resumen --}}
         <div class="bg-white shadow rounded-lg p-4">
             <h2 class="text-sm font-semibold text-gray-500">Usuarios totales</h2>
             <p class="text-2xl font-bold">{{ \App\Models\UserModel::count() }}</p>

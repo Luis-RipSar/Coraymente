@@ -31,7 +31,7 @@ class PublicationsSeeder extends Seeder
                 'published_at'=> Carbon::now()->subDays(10),
             ],
             [
-                'titulo'      => 'Autocoonocimiento',
+                'titulo'      => 'Autoconocimiento',
                 'resumen'     => 'En una vida llena de demandas, prisas y expectativas, a veces es muy difícil poder dedicar el tiempo suficiente a cuidarnos de forma integra y a dar respuesta a nuestras necesidades. ',
                 'body'        => 'En una vida llena de demandas, prisas y expectativas, a veces es muy difícil poder dedicar el tiempo suficiente a cuidarnos de forma integra y a dar respuesta a nuestras necesidades. 
                                 No obstante, el primer paso para poder sentirnos bien es la consciencia en uno mismo, comprendiendo y atendiendo a aquello que nos hace sentir bien, evitando que ese malestar se instaure en nosotros y provoque síntomas como desregulación emocional o bloqueo, problemas de memoria o despistes y somatizaciones físicas. 

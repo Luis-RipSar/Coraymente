@@ -55,7 +55,7 @@
         <nav class="footer-legal">
             <a href="#">Aviso legal</a>
             <a href="#">Política de privacidad</a>
-            <a href="#">Política de cookies</a>
+            <a href="{{ route('politica-cookies') }}">Política de cookies</a>
         </nav>
     </div>
 </footer>
