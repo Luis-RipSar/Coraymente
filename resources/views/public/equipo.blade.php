@@ -9,14 +9,14 @@
         {{-----------------LORENA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
             {{-- Foto arriba --}}
-            <img src="{{ asset('imagenes/equipo/jefas.jpg') }}" alt="Lorena Sanchez" class="profesional-avatar">
+            <img src="{{ asset('imagenes/equipo/lorena.jpg') }}" alt="Lorena Sanchez" class="profesional-avatar">
 
             <div class="profesional-content">
                 {{-- Cabecera --}}
                 {{-- Nombre y datos básicos --}}
                 <h2 class="profesional-nombre">Lorena Sánchez Martínez</h2>
                 <p class="profesional-pro">Psicóloga</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <span class="profesional-col">Nº COL.: CV-15384</span>
 
                 {{-- Descripción breve --}}
                 <p class="profesional-desc mt-2">
@@ -72,7 +72,7 @@
         {{-----------------MINERVA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
             {{-- Foto arriba --}}
-            <img src="{{ asset('imagenes/equipo/jefas.jpg') }}" alt="Minerva Linares" class="profesional-avatar">
+            <img src="{{ asset('imagenes/equipo/minerva.jpg') }}" alt="Minerva Linares" class="profesional-avatar">
 
             <div class="profesional-content">
                 {{-- Cabecera --}}
@@ -133,7 +133,7 @@
                 {{-- Nombre y datos básicos --}}
                 <h2 class="profesional-nombre">Raquel Cristo</h2>
                 <p class="profesional-pro">Terapeuta Ocupacional</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <span class="profesional-col">Nº COL.: CV-0845</span>
 
                 {{-- Descripción breve --}}
                 <p class="profesional-desc mt-2 mb-4">
@@ -188,7 +188,7 @@
                 {{-- Nombre y datos básicos --}}
                 <h2 class="profesional-nombre">Clara San Nicolás</h2>
                 <p class="profesional-pro">Psicóloga</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <span class="profesional-col">Nº COL.: CV-16729</span>
 
                 {{-- Descripción breve --}}
                 <p class="profesional-desc mt-2 mb-4">
@@ -215,17 +215,6 @@
                             </li>
                         </ul>
                     </div>
-
-                    <div class="section-group">
-                        <button class="section-toggle"
-                            @click="openSection = openSection === 'complementaria' ? null : 'complementaria'">
-                            Formación complementaria
-                            <span x-show="openSection !== 'complementaria'">+</span>
-                            <span x-show="openSection === 'complementaria'">–</span> </button>
-                        <ul class="section-list" x-show="openSection === 'complementaria'" x-collapse>
-                            <li>Curso de ...</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
 
@@ -238,7 +227,7 @@
 
                 <h2 class="profesional-nombre">Noemi Martínez</h2>
                 <p class="profesional-pro">Terapeuta Ocupacional</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <span class="profesional-col">Nº COL.: CV-0923</span>
 
                 <p class="profesional-desc mt-2 mb-4">
                     Soy Noemi. Parte de mi enfoque en terapia ocupacional consiste en la adaptación de
@@ -257,9 +246,8 @@
                             <span x-show="openSection === 'formacion'">–</span>
                         </button>
                         <ul class="section-list" x-show="openSection === 'formacion'" x-collapse>
-                            <li>Grado en </li>
-                            <li>Máster en </li>
-                            <li>Doctorado en </li>
+                            <li>Ciclo formativo superior TAFAD(IES Victoria Kent)</li>
+                            <li>Grado en Terapia Ocupacional(UMH)</li>
                         </ul>
                     </div>
 
@@ -270,7 +258,11 @@
                             <span x-show="openSection !== 'complementaria'">+</span>
                             <span x-show="openSection === 'complementaria'">–</span> </button>
                         <ul class="section-list" x-show="openSection === 'complementaria'" x-collapse>
-                            <li>Curso de ...</li>
+                            <li>Curso de Integración sensorial</li>
+                            <li>Curso de "Dificultades del aprendizaje en la edad escolar</li>
+                            <li>Curso de iniciación a terapias ecuestres</li>
+                            <li>Curso de "Comunicación aumentativa y alternativa, software, herramientas y materiales
+                                para la comunicación" (ARASAAC)</li>
                         </ul>
                     </div>
                 </div>
@@ -327,13 +319,13 @@
         </div>
         {{-----------------ELENA-----------------------}}
         <div class="profesional-card" x-data="{ openSection: null }">
-            <img src="{{ asset('imagenes/equipo/jefas.jpg') }}" alt="Elena Cuerda" class="profesional-avatar">
+            <img src="{{ asset('imagenes/equipo/elena.jpg') }}" alt="Elena Cuerda" class="profesional-avatar">
 
             <div class="profesional-content">
 
                 <h2 class="profesional-nombre">Elena Cuerda Navarro</h2>
                 <p class="profesional-pro">Logopeda</p>
-                <span class="profesional-col">Nº COL.: </span>
+                <span class="profesional-col">Nº COL.: CV-284651</span>
 
                 <p class="profesional-desc mt-2 mb-4">
                     Soy Elena, y soy una apasionada de mi trabajo. Llevo en el mundo de la Logopedia

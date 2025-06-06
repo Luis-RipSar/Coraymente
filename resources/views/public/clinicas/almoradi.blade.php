@@ -12,6 +12,7 @@
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/1.jpg') }}" alt="imagen"></div>
                 <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/2.jpg') }}" alt="imagen"></div>
+                <div class="gallery-item"><img src="{{ asset('imagenes/almoradi/3.png') }}" alt="imagen"></div>
             </div>
         </div>
 
