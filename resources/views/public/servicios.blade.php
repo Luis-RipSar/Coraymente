@@ -3,7 +3,10 @@
 @section('content')
 <div class="servicios-container" x-data="{ 
         active: 'psicologia',
-        menuOpen: false
+        menuOpen: false,
+        scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }">
     {{-- Menú lateral --}}
     <nav class="servicios-menu" :class="{ 'open': menuOpen }">
@@ -14,7 +17,8 @@
                 {{-- Psicología --}}
                 <li>
                     <details class="servicio-item" :open="active === 'psicologia'">
-                        <summary class="menu-item" @click.prevent="active = 'psicologia'; menuOpen = false">
+                        <summary class="menu-item"
+                            @click.prevent="active = 'psicologia'; menuOpen = false; scrollToTop()">
                             Psicología
                         </summary>
                     </details>
@@ -22,7 +26,7 @@
                 {{-- Neuropsicología --}}
                 <li>
                     <details class="servicio-item" :open="active.startsWith('neuropsicologia')">
-                        <summary class="menu-item" @click.prevent="active = 'neuropsicologia'">
+                        <summary class="menu-item" @click.prevent="active = 'neuropsicologia'; scrollToTop()">
                             Neuropsicología
                         </summary>
                     </details>
@@ -30,7 +34,7 @@
                 {{-- Terapia Ocupacional --}}
                 <li>
                     <details class="servicio-item" :open="active.startsWith('terapia_ocupacional')">
-                        <summary class="menu-item" @click.prevent="active = 'terapia_ocupacional'">
+                        <summary class="menu-item" @click.prevent="active = 'terapia_ocupacional'; scrollToTop()">
                             Terapia Ocupacional
                         </summary>
                     </details>
@@ -39,7 +43,7 @@
                 {{-- Logopedia --}}
                 <li>
                     <details class="servicio-item" :open="active.startsWith('logopedia')">
-                        <summary class="menu-item" @click.prevent="active = 'logopedia'">
+                        <summary class="menu-item" @click.prevent="active = 'logopedia'; scrollToTop()">
                             Logopedia
                         </summary>
                     </details>
@@ -48,7 +52,7 @@
                 {{-- Neurorehabilitación --}}
                 <li>
                     <details class="servicio-item" :open="active.startsWith('neurorrehabilitacion')">
-                        <summary class="menu-item" @click.prevent="active = 'neurorrehabilitacion'">
+                        <summary class="menu-item" @click.prevent="active = 'neurorrehabilitacion'; scrollToTop()">
                             Neurorrehabilitación
                         </summary>
                     </details>
@@ -57,7 +61,7 @@
                 {{-- Terapia Asistida con Animales --}}
                 <li>
                     <details class="servicio-item" :open="active.startsWith('taa')">
-                        <summary class="menu-item" @click.prevent="active = 'taa'">
+                        <summary class="menu-item" @click.prevent="active = 'taa'; scrollToTop()">
                             Terapia con Animales
                         </summary>
                     </details>
@@ -66,7 +70,7 @@
                 {{-- Apoyo Educación --}}
                 <li>
                     <details class="servicio-item" :open="active.startsWith('ae')">
-                        <summary class="menu-item" @click.prevent="active = 'ae'">
+                        <summary class="menu-item" @click.prevent="active = 'ae'; scrollToTop()">
                             Apoyo Educación
                         </summary>
                     </details>

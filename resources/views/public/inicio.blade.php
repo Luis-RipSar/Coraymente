@@ -177,14 +177,14 @@
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/jefas.jpg" alt="Lorena Sánchez Martínez">
+                        <img class="avatar" src="imagenes/equipo/lorena.jpg" alt="Lorena Sánchez Martínez">
                     </div>
                     <h3>Lorena Sánchez Martínez</h3>
                 </div>
                 <div class="equipo-card">
                     <div class="avatar-wrapper">
                         <div class="bg-circle"></div>
-                        <img class="avatar" src="imagenes/equipo/jefas.jpg" alt="Minerva Linares Martín-Calpena">
+                        <img class="avatar" src="imagenes/equipo/minerva.jpg" alt="Minerva Linares Martín-Calpena">
                     </div>
                     <h3>Minerva Linares Martín-Calpena</h3>
                 </div>
